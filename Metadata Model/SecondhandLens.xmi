@@ -1,0 +1,2573 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<XMI xmi.version = '1.2' xmlns:CWM = 'org.omg.xmi.namespace.CWM' xmlns:CWMTFM = 'org.omg.xmi.namespace.CWMTFM'
+  xmlns:CWMRDB = 'org.omg.xmi.namespace.CWMRDB' xmlns:CWMOLAP = 'org.omg.xmi.namespace.CWMOLAP'
+  xmlns:CWMMDB = 'org.omg.xmi.namespace.CWMMDB' timestamp = 'Tue May 08 15:50:12 MDT 2018'>
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Netbeans XMI Writer</XMI.exporter>
+      <XMI.exporterVersion>1.0</XMI.exporterVersion>
+    </XMI.documentation>
+  </XMI.header>
+  <XMI.content>
+    <CWM:Event xmi.id = 'a1' name = 'SECURITY_SERVICE'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a2' tag = 'SECURITY_SERVICE_URL'/>
+        <CWM:TaggedValue xmi.id = 'a3' tag = 'SECURITY_DETAILS_NAME'/>
+        <CWM:TaggedValue xmi.id = 'a4' tag = 'SECURITY_DETAIL_NAME'/>
+        <CWM:TaggedValue xmi.id = 'a5' tag = 'SECURITY_DETAIL_TYPE' value = 'All'/>
+        <CWM:TaggedValue xmi.id = 'a6' tag = 'SECURITY_USERNAME'/>
+        <CWM:TaggedValue xmi.id = 'a7' tag = 'SECURITY_PASSWORD'/>
+        <CWM:TaggedValue xmi.id = 'a8' tag = 'SECURITY_PROXY_HOST'/>
+        <CWM:TaggedValue xmi.id = 'a9' tag = 'SECURITY_PROXY_PORT'/>
+        <CWM:TaggedValue xmi.id = 'a10' tag = 'SECURITY_NON_PROXY_HOSTS'/>
+        <CWM:TaggedValue xmi.id = 'a11' tag = 'SECURITY_FILENAME'/>
+        <CWM:TaggedValue xmi.id = 'a12' tag = 'SECURITY_URL' value = 'null'/>
+      </CWM:ModelElement.taggedValue>
+    </CWM:Event>
+    <CWM:Parameter xmi.id = 'a13' name = 'en_US'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a14' tag = 'LOCALE_DESCRIPTION' value = 'English (American)'/>
+        <CWM:TaggedValue xmi.id = 'a15' tag = 'LOCALE_ORDER' value = '1'/>
+        <CWM:TaggedValue xmi.id = 'a16' tag = 'LOCALE_IS_DEFAULT' value = 'Y'/>
+      </CWM:ModelElement.taggedValue>
+    </CWM:Parameter>
+    <CWM:Description xmi.id = 'a17' name = 'foreground_color' body = '0,0,0'
+      type = 'Color'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a19' name = 'font' body = 'Arial-10' type = 'Font'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a20' name = 'alignment' body = 'left' type = 'Alignment'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a21' name = 'mask' body = 'MM-dd-yyyy' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a23' name = 'mask' body = '#,##0' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a24'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a25' name = 'hidden' body = 'Y' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWM:Class xmi.idref = 'a26'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a27' name = 'name' body = 'Lens category' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a28'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a29' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a28'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a30' name = 'target_table' body = 'lens_category'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a28'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a31' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a28'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a32' name = 'name' body = 'Lens category id'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a34' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a35' name = 'formula' body = 'lens_category_id'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a36' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a37' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a38' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a39' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a40' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a33'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a41' name = 'name' body = 'Lens category' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a43' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a44' name = 'formula' body = 'lens_category'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a45' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a46' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a47' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a48' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a49' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a42'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a50' name = 'name' body = 'Sales channel' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a51'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a52' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a51'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a53' name = 'target_table' body = 'sales_channel'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a51'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a54' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a51'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a55' name = 'name' body = 'Sales channel id'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a57' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a58' name = 'formula' body = 'sales_channel_id'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a59' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a60' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a61' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a62' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a63' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a56'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a64' name = 'name' body = 'Sales Channel' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a66' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a67' name = 'formula' body = 'sales_channel'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a68' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a69' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a70' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a71' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a72' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a65'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a73' name = 'name' body = 'Store' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a74'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a75' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a74'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a76' name = 'target_table' body = 'store' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a74'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a77' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a74'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a78' name = 'name' body = 'Store id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a80' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a81' name = 'formula' body = 'store_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a82' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a83' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a84' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a85' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a86' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a79'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a87' name = 'name' body = 'Store name' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a89' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a90' name = 'formula' body = 'store_name' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a91' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a92' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a93' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a94' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a95' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a88'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a96' name = 'name' body = 'Store country' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a98' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a99' name = 'formula' body = 'store_country'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a100' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a101' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a102' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a103' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a104' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a97'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a105' name = 'name' body = 'Store city' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a107' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a108' name = 'formula' body = 'store_city' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a109' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a110' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a111' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a112' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a113' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a106'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a114' name = 'name' body = 'Lens' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a115'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a116' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a115'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a117' name = 'target_table' body = 'lens' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a115'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a118' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a115'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a119' name = 'name' body = 'Lens id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a121' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a122' name = 'formula' body = 'lens_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a123' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a124' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a125' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a126' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a127' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a120'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a128' name = 'name' body = 'Name' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a130' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a131' name = 'formula' body = 'name' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a132' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a133' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a134' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a135' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a136' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a129'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a137' name = 'name' body = 'Year' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a139' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a140' name = 'formula' body = 'year' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a141' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a142' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a143' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a144' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a145' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a138'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a146' name = 'name' body = 'Lens category id'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a148' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a149' name = 'formula' body = 'lens_category_id'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a150' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a151' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a152' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a153' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a154' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a147'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a155' name = 'name' body = 'Focal length min'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a157' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a158' name = 'formula' body = 'focal_length_min'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a159' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a160' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a161' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a162' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a163' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a156'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a164' name = 'name' body = 'Focal length max'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a166' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a167' name = 'formula' body = 'focal_length_max'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a168' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a169' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a170' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a171' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a172' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a165'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a173' name = 'name' body = 'Aperture max' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a175' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a176' name = 'formula' body = 'aperture_max'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a177' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a178' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a179' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a180' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a181' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a174'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a182' name = 'name' body = 'Aperture min' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a184' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a185' name = 'formula' body = 'aperture_min'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a186' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a187' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a188' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a189' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a190' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a183'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a191' name = 'name' body = 'Focusing distance min'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a193' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a194' name = 'formula' body = 'focusing_distance_min'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a195' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a196' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a197' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a198' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a199' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a200' name = 'name' body = 'Filter size' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a202' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a203' name = 'formula' body = 'filter_size' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a204' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a205' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a206' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a207' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a208' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a201'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a209' name = 'name' body = 'Sales' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a210'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a211' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a210'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a212' name = 'target_table' body = 'sales' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a210'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a213' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a210'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a214' name = 'name' body = 'Sales id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a216' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a217' name = 'formula' body = 'sales_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a218' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a219' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a220' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a221' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a222' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a215'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a223' name = 'name' body = 'Date' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a225' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a226' name = 'formula' body = 'date' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a227' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a228' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a229' name = 'datatype' body = 'Date,-1,-1' type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a230' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a231' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a232' name = 'name' body = 'Customer id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a234' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a235' name = 'formula' body = 'customer_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a236' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a237' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a238' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a239' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a240' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a233'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a241' name = 'name' body = 'Lens id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a243' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a244' name = 'formula' body = 'lens_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a245' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a246' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a247' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a248' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a249' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a242'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a250' name = 'name' body = 'Sales channel id'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a252' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a253' name = 'formula' body = 'sales_channel_id'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a254' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a255' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a256' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a257' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a258' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a251'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a259' name = 'name' body = 'Store id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a261' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a262' name = 'formula' body = 'store_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a263' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a264' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a265' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a266' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a267' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a268' name = 'name' body = 'Sales' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a270' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a271' name = 'formula' body = 'amount' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a272' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a273' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a274' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a275' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a276' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a269'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a277' name = 'name' body = 'Customer' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a278'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a279' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a278'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a280' name = 'target_table' body = 'customer'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a278'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a281' name = 'target_schema' body = 'sls_raw'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a278'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a282' name = 'name' body = 'Customer id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a284' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a285' name = 'formula' body = 'customer_id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a286' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a287' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a288' name = 'datatype' body = 'Numeric,15,0'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a289' name = 'fieldtype' body = 'Key' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a290' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a283'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a291' name = 'name' body = 'Name' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a293' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a294' name = 'formula' body = 'name' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a295' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a296' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a297' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a298' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a299' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a292'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a300' name = 'name' body = 'Address' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a302' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a303' name = 'formula' body = 'address' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a304' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a305' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a306' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a307' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a308' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a301'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a309' name = 'name' body = 'City' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a311' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a312' name = 'formula' body = 'city' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a313' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a314' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a315' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a316' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a317' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a310'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a318' name = 'name' body = 'Country' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a320' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a321' name = 'formula' body = 'country' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a322' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a323' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a324' name = 'datatype' body = 'String,45,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a325' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a326' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a319'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a327' name = 'name' body = 'Last updated' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a329' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a330' name = 'formula' body = 'last_updated'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a331' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a332' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a333' name = 'datatype' body = 'Date,-1,-1' type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a334' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a335' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a328'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a336' name = 'name' body = 'Secondhand Lens'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a337'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a338' name = 'description' body = 'Metadata model for Secondhand Lens'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a337'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a339' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a337'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a340' name = 'row_level_security' body = '&lt;row-level-security type=&quot;none&quot;&gt;&lt;formula&gt;&lt;![CDATA[]]&gt;&lt;/formula&gt;&lt;entries&gt;&lt;/entries&gt;&lt;/row-level-security&gt;'
+      type = 'RowLevelSecurity'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a337'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a341' name = 'name' body = 'Customer' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a342'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a343' name = 'name' body = 'Sales' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a344'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a345' name = 'name' body = 'Lens' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a346'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a347' name = 'name' body = 'Stores' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a348'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a349' name = 'name' body = 'Sales channel' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a350'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a351' name = 'name' body = 'Lens category' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a352'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a353' name = 'name' body = 'Customers' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a354'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a355' name = 'description' body = 'Secondhand Lens Customers'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a354'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a356' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a354'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a357' name = 'name' body = 'Lens' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a358'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a359' name = 'description' body = 'Secondhand Lens'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a358'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a360' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a358'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a361' name = 'name' body = 'Stores' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a362'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a363' name = 'description' body = 'Secondhand Lens Stores'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a362'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a364' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a362'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a365' name = 'name' body = 'Sales Channel' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a366'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a367' name = 'description' body = 'Secondhand Lens Sales Channels'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a366'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a368' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a366'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a369' name = 'name' body = 'Sales' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a370'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a371' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a370'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWMRDB:Table xmi.id = 'a28' name = 'PT_LENS_CATEGORY' isAbstract = 'false'
+      isTemporary = 'false' isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a372' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a33' name = 'lens_category_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a373' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a42' name = 'lens_category'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a374' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Table xmi.id = 'a51' name = 'PT_SALES_CHANNEL' isAbstract = 'false'
+      isTemporary = 'false' isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a375' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a56' name = 'sales_channel_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a376' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a65' name = 'sales_channel'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a377' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Table xmi.id = 'a74' name = 'PT_STORE' isAbstract = 'false' isTemporary = 'false'
+      isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a378' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a79' name = 'store_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a379' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a88' name = 'store_name'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a380' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a97' name = 'store_country'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a381' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a106' name = 'store_city'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a382' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Table xmi.id = 'a115' name = 'PT_LENS' isAbstract = 'false' isTemporary = 'false'
+      isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a383' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a120' name = 'lens_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a384' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a129' name = 'name'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a385' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a138' name = 'year'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a386' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a147' name = 'lens_category_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a387' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a156' name = 'focal_length_min'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a388' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a165' name = 'focal_length_max'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a389' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a174' name = 'aperture_max'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a390' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a183' name = 'aperture_min'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a391' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a192' name = 'focusing_distance_min'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a392' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a201' name = 'filter_size'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a393' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Table xmi.id = 'a210' name = 'PT_SALES' isAbstract = 'false' isTemporary = 'false'
+      isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a394' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a215' name = 'sales_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a395' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a224' name = 'date'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a396' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a233' name = 'customer_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a397' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a242' name = 'lens_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a398' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a251' name = 'sales_channel_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a399' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a260' name = 'store_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a400' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a269' name = 'amount'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a401' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Table xmi.id = 'a278' name = 'PT_CUSTOMER' isAbstract = 'false'
+      isTemporary = 'false' isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a402' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'SLS_RAW'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a283' name = 'customer_id'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a403' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a292' name = 'name'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a404' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a301' name = 'address'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a405' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a310' name = 'city'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a406' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a319' name = 'country'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a407' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+        <CWMRDB:Column xmi.id = 'a328' name = 'last_updated'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a408' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+          </CWM:ModelElement.taggedValue>
+        </CWMRDB:Column>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Catalog xmi.id = 'a409' name = 'SLS_RAW'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a410' tag = 'DATABASE_SERVER' value = 'localhost'/>
+        <CWM:TaggedValue xmi.id = 'a411' tag = 'DATABASE_TYPE' value = 'MYSQL'/>
+        <CWM:TaggedValue xmi.id = 'a412' tag = 'DATABASE_ACCESS' value = 'Native'/>
+        <CWM:TaggedValue xmi.id = 'a413' tag = 'DATABASE_DATABASE' value = 'sls_raw'/>
+        <CWM:TaggedValue xmi.id = 'a414' tag = 'DATABASE_PORT' value = '3306'/>
+        <CWM:TaggedValue xmi.id = 'a415' tag = 'DATABASE_USERNAME' value = 'root'/>
+        <CWM:TaggedValue xmi.id = 'a416' tag = 'DATABASE_PASSWORD' value = 'password'/>
+        <CWM:TaggedValue xmi.id = 'a417' tag = 'DATABASE_SERVERNAME'/>
+        <CWM:TaggedValue xmi.id = 'a418' tag = 'DATABASE_DATA_TABLESPACE'/>
+        <CWM:TaggedValue xmi.id = 'a419' tag = 'DATABASE_INDEX_TABLESPACE'/>
+        <CWM:TaggedValue xmi.id = 'a420' tag = 'DATABASE_ATTRIBUTE_PREFIX_USE_POOLING'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a421' tag = 'DATABASE_ATTRIBUTE_PREFIX_PRESERVE_RESERVED_WORD_CASE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a422' tag = 'DATABASE_ATTRIBUTE_PREFIX_IS_CLUSTERED'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a423' tag = 'DATABASE_ATTRIBUTE_PREFIX_SUPPORTS_TIMESTAMP_DATA_TYPE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a424' tag = 'DATABASE_ATTRIBUTE_PREFIX_SUPPORTS_BOOLEAN_DATA_TYPE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a425' tag = 'DATABASE_ATTRIBUTE_PREFIX_STREAM_RESULTS'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a426' tag = 'DATABASE_ATTRIBUTE_PREFIX_PORT_NUMBER'
+          value = '3306'/>
+        <CWM:TaggedValue xmi.id = 'a427' tag = 'DATABASE_ATTRIBUTE_PREFIX_FORCE_IDENTIFIERS_TO_UPPERCASE'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a428' tag = 'DATABASE_ATTRIBUTE_PREFIX_FORCE_IDENTIFIERS_TO_LOWERCASE'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a429' tag = 'DATABASE_ATTRIBUTE_PREFIX_QUOTE_ALL_FIELDS'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a430' tag = 'DATABASE_JDBC_URL' value = 'jdbc:mysql://localhost:3306/sls_raw'/>
+      </CWM:ModelElement.taggedValue>
+    </CWMRDB:Catalog>
+    <CWMOLAP:Schema xmi.id = 'a431' name = 'BV_MODEL_1'/>
+    <CWMMDB:Schema xmi.id = 'a337' name = 'BV_MODEL_1'>
+      <CWM:Namespace.ownedElement>
+        <CWM:KeyRelationship xmi.id = 'a432'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a433' tag = 'RELATIONSHIP_TABLENAME_PARENT' value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a434' tag = 'RELATIONSHIP_TABLENAME_CHILD' value = 'BT_LENS_CATEGORY_LENS_CATEGORY'/>
+            <CWM:TaggedValue xmi.id = 'a435' tag = 'RELATIONSHIP_FIELDNAME_PARENT' value = 'BC_LENS_LENS_CATEGORY_ID'/>
+            <CWM:TaggedValue xmi.id = 'a436' tag = 'RELATIONSHIP_FIELDNAME_CHILD' value = 'BC_LENS_CATEGORY_LENS_CATEGORY_ID'/>
+            <CWM:TaggedValue xmi.id = 'a437' tag = 'RELATIONSHIP_TYPE' value = 'N:1'/>
+            <CWM:TaggedValue xmi.id = 'a438' tag = 'RELATIONSHIP_JOIN_ORDER_KEY' value = 'lens_category_id'/>
+            <CWM:TaggedValue xmi.id = 'a439' tag = 'RELATIONSHIP_DESCRIPTION' value = ''/>
+          </CWM:ModelElement.taggedValue>
+        </CWM:KeyRelationship>
+        <CWM:KeyRelationship xmi.id = 'a440'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a441' tag = 'RELATIONSHIP_TABLENAME_PARENT' value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a442' tag = 'RELATIONSHIP_TABLENAME_CHILD' value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a443' tag = 'RELATIONSHIP_FIELDNAME_PARENT' value = 'BC_SALES_LENS_ID'/>
+            <CWM:TaggedValue xmi.id = 'a444' tag = 'RELATIONSHIP_FIELDNAME_CHILD' value = 'BC_LENS_LENS_ID'/>
+            <CWM:TaggedValue xmi.id = 'a445' tag = 'RELATIONSHIP_TYPE' value = 'N:1'/>
+            <CWM:TaggedValue xmi.id = 'a446' tag = 'RELATIONSHIP_JOIN_ORDER_KEY' value = 'lens_id'/>
+            <CWM:TaggedValue xmi.id = 'a447' tag = 'RELATIONSHIP_DESCRIPTION' value = ''/>
+          </CWM:ModelElement.taggedValue>
+        </CWM:KeyRelationship>
+        <CWM:KeyRelationship xmi.id = 'a448'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a449' tag = 'RELATIONSHIP_TABLENAME_PARENT' value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a450' tag = 'RELATIONSHIP_TABLENAME_CHILD' value = 'BT_SALES_CHANNEL_SALES_CHANNEL'/>
+            <CWM:TaggedValue xmi.id = 'a451' tag = 'RELATIONSHIP_FIELDNAME_PARENT' value = 'BC_SALES_SALES_CHANNEL_ID'/>
+            <CWM:TaggedValue xmi.id = 'a452' tag = 'RELATIONSHIP_FIELDNAME_CHILD' value = 'BC_SALES_CHANNEL_SALES_CHANNEL_ID'/>
+            <CWM:TaggedValue xmi.id = 'a453' tag = 'RELATIONSHIP_TYPE' value = 'N:1'/>
+            <CWM:TaggedValue xmi.id = 'a454' tag = 'RELATIONSHIP_JOIN_ORDER_KEY' value = 'sales_channel_id'/>
+            <CWM:TaggedValue xmi.id = 'a455' tag = 'RELATIONSHIP_DESCRIPTION' value = ''/>
+          </CWM:ModelElement.taggedValue>
+        </CWM:KeyRelationship>
+        <CWM:KeyRelationship xmi.id = 'a456'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a457' tag = 'RELATIONSHIP_TABLENAME_PARENT' value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a458' tag = 'RELATIONSHIP_TABLENAME_CHILD' value = 'BT_STORE_STORE'/>
+            <CWM:TaggedValue xmi.id = 'a459' tag = 'RELATIONSHIP_FIELDNAME_PARENT' value = 'BC_SALES_STORE_ID'/>
+            <CWM:TaggedValue xmi.id = 'a460' tag = 'RELATIONSHIP_FIELDNAME_CHILD' value = 'BC_STORE_STORE_ID'/>
+            <CWM:TaggedValue xmi.id = 'a461' tag = 'RELATIONSHIP_TYPE' value = 'N:1'/>
+            <CWM:TaggedValue xmi.id = 'a462' tag = 'RELATIONSHIP_JOIN_ORDER_KEY' value = 'store_id'/>
+            <CWM:TaggedValue xmi.id = 'a463' tag = 'RELATIONSHIP_DESCRIPTION' value = ''/>
+          </CWM:ModelElement.taggedValue>
+        </CWM:KeyRelationship>
+        <CWM:KeyRelationship xmi.id = 'a464'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a465' tag = 'RELATIONSHIP_TABLENAME_PARENT' value = 'BT_CUSTOMER_CUSTOMER'/>
+            <CWM:TaggedValue xmi.id = 'a466' tag = 'RELATIONSHIP_TABLENAME_CHILD' value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a467' tag = 'RELATIONSHIP_FIELDNAME_PARENT' value = 'BC_CUSTOMER_CUSTOMER_ID'/>
+            <CWM:TaggedValue xmi.id = 'a468' tag = 'RELATIONSHIP_FIELDNAME_CHILD' value = 'BC_SALES_CUSTOMER_ID'/>
+            <CWM:TaggedValue xmi.id = 'a469' tag = 'RELATIONSHIP_TYPE' value = '1:N'/>
+            <CWM:TaggedValue xmi.id = 'a470' tag = 'RELATIONSHIP_JOIN_ORDER_KEY' value = 'customer_id'/>
+            <CWM:TaggedValue xmi.id = 'a471' tag = 'RELATIONSHIP_DESCRIPTION' value = ''/>
+          </CWM:ModelElement.taggedValue>
+        </CWM:KeyRelationship>
+        <CWM:Extent xmi.id = 'a354' name = 'CT_CUSTOMERS'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a472' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a473' name = 'BC_CUSTOMER_NAME'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a474' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a475' name = 'BC_CUSTOMER_ADDRESS'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a476' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a477' name = 'BC_CUSTOMER_COUNTRY'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a478' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a479' name = 'BC_CUSTOMER_CITY'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a480' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+        <CWM:Extent xmi.id = 'a358' name = 'CT_LENS'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a481' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a482' name = 'BC_LENS_NAME'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a483' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a484' name = 'BC_LENS_YEAR'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a485' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a486' name = 'BC_LENS_FOCAL_LENGTH_MIN'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a487' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a488' name = 'BC_LENS_FOCAL_LENGTH_MAX'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a489' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a490' name = 'BC_LENS_APERTURE_MAX'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a491' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a492' name = 'BC_LENS_APERTURE_MIN'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a493' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a494' name = 'BC_LENS_FOCUSING_DISTANCE_MIN'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a495' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a496' name = 'BC_LENS_FILTER_SIZE'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a497' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+        <CWM:Extent xmi.id = 'a362' name = 'CT_STORES'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a498' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a499' name = 'BC_STORE_STORE_NAME'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a500' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a501' name = 'BC_STORE_STORE_COUNTRY'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a502' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a503' name = 'BC_STORE_STORE_CITY'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a504' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+        <CWM:Extent xmi.id = 'a366' name = 'BC_SALES_CHANNEL'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a505' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a506' name = 'BC_SALES_CHANNEL_SALES_CHANNEL'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a507' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+        <CWM:Extent xmi.id = 'a370' name = 'BC_SALES'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a508' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a509' name = 'BC_SALES_DATE'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a510' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a511' name = 'BC_SALES_AMOUNT'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a512' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+      </CWM:Namespace.ownedElement>
+      <CWMMDB:Schema.dimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a513' name = 'BC_CUSTOMER_CUSTOMER_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a514' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'customer_id'/>
+            <CWM:TaggedValue xmi.id = 'a515' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a516' name = 'BC_CUSTOMER_NAME'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a517' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'name'/>
+            <CWM:TaggedValue xmi.id = 'a518' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a519' name = 'BC_CUSTOMER_ADDRESS'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a520' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'address'/>
+            <CWM:TaggedValue xmi.id = 'a521' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a522' name = 'BC_CUSTOMER_CITY'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a523' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'city'/>
+            <CWM:TaggedValue xmi.id = 'a524' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a525' name = 'BC_CUSTOMER_COUNTRY'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a526' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'country'/>
+            <CWM:TaggedValue xmi.id = 'a527' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a528' name = 'BC_CUSTOMER_LAST_UPDATED'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a529' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'last_updated'/>
+            <CWM:TaggedValue xmi.id = 'a530' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_CUSTOMER_CUSTOMER'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a342'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a531' name = 'BC_SALES_SALES_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a532' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'sales_id'/>
+            <CWM:TaggedValue xmi.id = 'a533' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a534' name = 'BC_SALES_DATE'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a535' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'date'/>
+            <CWM:TaggedValue xmi.id = 'a536' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a537' tag = 'CONCEPT_PARENT_NAME' value = 'Date'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a538' name = 'BC_SALES_CUSTOMER_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a539' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'customer_id'/>
+            <CWM:TaggedValue xmi.id = 'a540' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a541' name = 'BC_SALES_LENS_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a542' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'lens_id'/>
+            <CWM:TaggedValue xmi.id = 'a543' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a544' name = 'BC_SALES_SALES_CHANNEL_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a545' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'sales_channel_id'/>
+            <CWM:TaggedValue xmi.id = 'a546' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a547' name = 'BC_SALES_STORE_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a548' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'store_id'/>
+            <CWM:TaggedValue xmi.id = 'a549' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a550' name = 'BC_SALES_AMOUNT'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a551' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'amount'/>
+            <CWM:TaggedValue xmi.id = 'a552' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a553' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a344'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a554' name = 'BC_LENS_LENS_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a555' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'lens_id'/>
+            <CWM:TaggedValue xmi.id = 'a556' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a557' name = 'BC_LENS_NAME'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a558' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'name'/>
+            <CWM:TaggedValue xmi.id = 'a559' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a560' name = 'BC_LENS_YEAR'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a561' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'year'/>
+            <CWM:TaggedValue xmi.id = 'a562' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a563' tag = 'CONCEPT_PARENT_NAME' value = 'Date'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a564' name = 'BC_LENS_LENS_CATEGORY_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a565' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'lens_category_id'/>
+            <CWM:TaggedValue xmi.id = 'a566' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a567' name = 'BC_LENS_FOCAL_LENGTH_MIN'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a568' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'focal_length_min'/>
+            <CWM:TaggedValue xmi.id = 'a569' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a570' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a571' name = 'BC_LENS_FOCAL_LENGTH_MAX'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a572' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'focal_length_max'/>
+            <CWM:TaggedValue xmi.id = 'a573' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a574' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a575' name = 'BC_LENS_APERTURE_MAX'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a576' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'aperture_max'/>
+            <CWM:TaggedValue xmi.id = 'a577' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a578' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a579' name = 'BC_LENS_APERTURE_MIN'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a580' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'aperture_min'/>
+            <CWM:TaggedValue xmi.id = 'a581' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a582' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a583' name = 'BC_LENS_FOCUSING_DISTANCE_MIN'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a584' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'focusing_distance_min'/>
+            <CWM:TaggedValue xmi.id = 'a585' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a586' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a587' name = 'BC_LENS_FILTER_SIZE'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a588' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'filter_size'/>
+            <CWM:TaggedValue xmi.id = 'a589' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a590' tag = 'CONCEPT_PARENT_NAME' value = 'Number'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a346'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a591' name = 'BC_STORE_STORE_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a592' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'store_id'/>
+            <CWM:TaggedValue xmi.id = 'a593' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_STORE_STORE'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a348'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a594' name = 'BC_STORE_STORE_NAME'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a595' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'store_name'/>
+            <CWM:TaggedValue xmi.id = 'a596' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_STORE_STORE'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a348'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a597' name = 'BC_STORE_STORE_COUNTRY'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a598' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'store_country'/>
+            <CWM:TaggedValue xmi.id = 'a599' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_STORE_STORE'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a348'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a600' name = 'BC_STORE_STORE_CITY'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a601' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'store_city'/>
+            <CWM:TaggedValue xmi.id = 'a602' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_STORE_STORE'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a348'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a603' name = 'BC_SALES_CHANNEL_SALES_CHANNEL_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a604' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'sales_channel_id'/>
+            <CWM:TaggedValue xmi.id = 'a605' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_CHANNEL_SALES_CHANNEL'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a350'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a606' name = 'BC_SALES_CHANNEL_SALES_CHANNEL'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a607' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'sales_channel'/>
+            <CWM:TaggedValue xmi.id = 'a608' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_SALES_CHANNEL_SALES_CHANNEL'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a350'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a609' name = 'BC_LENS_CATEGORY_LENS_CATEGORY_ID'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a610' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'lens_category_id'/>
+            <CWM:TaggedValue xmi.id = 'a611' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_CATEGORY_LENS_CATEGORY'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a352'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a612' name = 'BC_LENS_CATEGORY_LENS_CATEGORY'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a613' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'lens_category'/>
+            <CWM:TaggedValue xmi.id = 'a614' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_LENS_CATEGORY_LENS_CATEGORY'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a352'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+      </CWMMDB:Schema.dimensionedObject>
+      <CWMMDB:Schema.dimension>
+        <CWMMDB:Dimension xmi.id = 'a342' name = 'BT_CUSTOMER_CUSTOMER' isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a615' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_CUSTOMER'/>
+            <CWM:TaggedValue xmi.id = 'a616' tag = 'TAG_POSITION_X' value = '434'/>
+            <CWM:TaggedValue xmi.id = 'a617' tag = 'TAG_POSITION_Y' value = '156'/>
+            <CWM:TaggedValue xmi.id = 'a618' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a513'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a516'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a519'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a522'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a525'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a528'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+        <CWMMDB:Dimension xmi.id = 'a344' name = 'BT_SALES_SALES' isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a619' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_SALES'/>
+            <CWM:TaggedValue xmi.id = 'a620' tag = 'TAG_POSITION_X' value = '434'/>
+            <CWM:TaggedValue xmi.id = 'a621' tag = 'TAG_POSITION_Y' value = '363'/>
+            <CWM:TaggedValue xmi.id = 'a622' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a531'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a534'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a538'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a541'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a544'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a547'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a550'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+        <CWMMDB:Dimension xmi.id = 'a346' name = 'BT_LENS_LENS' isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a623' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_LENS'/>
+            <CWM:TaggedValue xmi.id = 'a624' tag = 'TAG_POSITION_X' value = '150'/>
+            <CWM:TaggedValue xmi.id = 'a625' tag = 'TAG_POSITION_Y' value = '367'/>
+            <CWM:TaggedValue xmi.id = 'a626' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a554'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a557'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a560'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a564'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a567'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a571'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a575'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a579'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a583'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a587'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+        <CWMMDB:Dimension xmi.id = 'a348' name = 'BT_STORE_STORE' isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a627' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_STORE'/>
+            <CWM:TaggedValue xmi.id = 'a628' tag = 'TAG_POSITION_X' value = '679'/>
+            <CWM:TaggedValue xmi.id = 'a629' tag = 'TAG_POSITION_Y' value = '360'/>
+            <CWM:TaggedValue xmi.id = 'a630' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a591'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a594'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a597'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a600'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+        <CWMMDB:Dimension xmi.id = 'a350' name = 'BT_SALES_CHANNEL_SALES_CHANNEL'
+          isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a631' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_SALES_CHANNEL'/>
+            <CWM:TaggedValue xmi.id = 'a632' tag = 'TAG_POSITION_X' value = '439'/>
+            <CWM:TaggedValue xmi.id = 'a633' tag = 'TAG_POSITION_Y' value = '601'/>
+            <CWM:TaggedValue xmi.id = 'a634' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a603'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a606'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+        <CWMMDB:Dimension xmi.id = 'a352' name = 'BT_LENS_CATEGORY_LENS_CATEGORY'
+          isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a635' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_LENS_CATEGORY'/>
+            <CWM:TaggedValue xmi.id = 'a636' tag = 'TAG_POSITION_X' value = '148'/>
+            <CWM:TaggedValue xmi.id = 'a637' tag = 'TAG_POSITION_Y' value = '162'/>
+            <CWM:TaggedValue xmi.id = 'a638' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a609'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a612'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+      </CWMMDB:Schema.dimension>
+    </CWMMDB:Schema>
+    <CWM:Class xmi.id = 'a18' name = 'Base' isAbstract = 'false'/>
+    <CWM:Class xmi.id = 'a22' name = 'Date' isAbstract = 'false'/>
+    <CWM:Class xmi.id = 'a24' name = 'Number' isAbstract = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a639' tag = 'CONCEPT_PARENT_NAME' value = 'Base'/>
+      </CWM:ModelElement.taggedValue>
+    </CWM:Class>
+    <CWM:Class xmi.id = 'a26' name = 'ID' isAbstract = 'false'/>
+  </XMI.content>
+</XMI>
