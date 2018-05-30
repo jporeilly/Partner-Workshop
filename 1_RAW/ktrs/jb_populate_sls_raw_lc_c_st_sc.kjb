@@ -4,6 +4,7 @@
   <description/>
   <extended_description/>
   <job_version/>
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2018/05/03 08:50:21.439</created_date>
@@ -374,12 +375,12 @@
       <yloc>352</yloc>
     </entry>
     <entry>
-      <name>lens category</name>
+      <name>lens_category</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_lens_category.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_lens_category.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -443,15 +444,15 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>416</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </entry>
     <entry>
-      <name>sales channels</name>
+      <name>sales_channels</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_sales_channels.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_sales_channels.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -479,7 +480,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>416</xloc>
-      <yloc>592</yloc>
+      <yloc>560</yloc>
     </entry>
     <entry>
       <name>store</name>
@@ -487,7 +488,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_store.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_store.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -515,13 +516,13 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>416</xloc>
-      <yloc>448</yloc>
+      <yloc>432</yloc>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>lens category</to>
+      <to>lens_category</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -539,7 +540,7 @@
     </hop>
     <hop>
       <from>START</from>
-      <to>sales channels</to>
+      <to>sales_channels</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -557,8 +558,37 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Parallel load the tables.
+Ensure Lens Category is loaded before Lens due to lookup.</note>
+      <xloc>112</xloc>
+      <yloc>80</yloc>
+      <width>475</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>192</bordercolorred>
+      <bordercolorgreen>192</bordercolorgreen>
+      <bordercolorblue>192</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <attributes>
+    <group>
+      <name>JobRestart</name>
+      <attribute>
+        <key>UniqueConnections</key>
+        <value>N</value>
+      </attribute>
+    </group>
     <group>
       <name>METASTORE.pentaho</name>
       <attribute>

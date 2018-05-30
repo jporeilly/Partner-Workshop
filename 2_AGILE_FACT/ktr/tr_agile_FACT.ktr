@@ -457,15 +457,15 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The transformation loads the MySQL sls_raw tables and outputs to MonetDB
-The records are loaded from the FACT table with a LEFT join.
+      <note>The transformation loads the MySQL sls_raw tables
+The records are loaded into the AGILE_FACT table with a LEFT join.
 Some of the generic columns are renamed for clarity.
 
 Use to build prototype model / schema and publish</note>
-      <xloc>144</xloc>
-      <yloc>176</yloc>
-      <width>618</width>
-      <heigth>131</heigth>
+      <xloc>96</xloc>
+      <yloc>128</yloc>
+      <width>359</width>
+      <heigth>89</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -483,10 +483,10 @@ Use to build prototype model / schema and publish</note>
     </notepad>
     <notepad>
       <note>Data Profiling has revealed that instore maps > store in sales_channel </note>
-      <xloc>368</xloc>
-      <yloc>672</yloc>
-      <width>561</width>
-      <heigth>34</heigth>
+      <xloc>256</xloc>
+      <yloc>464</yloc>
+      <width>377</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -507,12 +507,11 @@ Use to build prototype model / schema and publish</note>
 
 Uncheck  batch updates.
 
-Use SQL button to create table. Don't worry about data type as this is just Dev.
-</note>
-      <xloc>144</xloc>
-      <yloc>384</yloc>
-      <width>633</width>
-      <heigth>157</heigth>
+Use SQL button to create table. Don't worry about data type as this is just Dev.</note>
+      <xloc>96</xloc>
+      <yloc>224</yloc>
+      <width>419</width>
+      <heigth>88</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -526,29 +525,6 @@ Use SQL button to create table. Don't worry about data type as this is just Dev.
       <bordercolorred>192</bordercolorred>
       <bordercolorgreen>192</bordercolorgreen>
       <bordercolorblue>192</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>The Bulk Loader is using variables.
-
-These would be defined in the project.properties file</note>
-      <xloc>368</xloc>
-      <yloc>752</yloc>
-      <width>422</width>
-      <heigth>83</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>0</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -664,11 +640,6 @@ These would be defined in the project.properties file</note>
   </connection>
   <order>
     <hop>
-      <from>Join Raw SLS tables</from>
-      <to>Map store values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows</from>
       <to>FACT Sales Table</to>
       <enabled>Y</enabled>
@@ -676,6 +647,11 @@ These would be defined in the project.properties file</note>
     <hop>
       <from>Map store values</from>
       <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join SLS_RAW tables</from>
+      <to>Map store values</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -697,7 +673,7 @@ These would be defined in the project.properties file</note>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>N</use_batch>
-    <specify_fields>N</specify_fields>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -709,16 +685,36 @@ These would be defined in the project.properties file</note>
     <return_field/>
     <fields>
       <field>
-        <column_name>sales_id</column_name>
-        <stream_name>sales_id</stream_name>
-      </field>
-      <field>
-        <column_name>sale_date</column_name>
-        <stream_name>sale_date</stream_name>
+        <column_name>sales_date</column_name>
+        <stream_name>sales_date</stream_name>
       </field>
       <field>
         <column_name>customer_id</column_name>
         <stream_name>customer_id</stream_name>
+      </field>
+      <field>
+        <column_name>customer_name</column_name>
+        <stream_name>customer_name</stream_name>
+      </field>
+      <field>
+        <column_name>last_name</column_name>
+        <stream_name>last_name</stream_name>
+      </field>
+      <field>
+        <column_name>first_name</column_name>
+        <stream_name>first_name</stream_name>
+      </field>
+      <field>
+        <column_name>country</column_name>
+        <stream_name>country</stream_name>
+      </field>
+      <field>
+        <column_name>city</column_name>
+        <stream_name>city</stream_name>
+      </field>
+      <field>
+        <column_name>address</column_name>
+        <stream_name>address</stream_name>
       </field>
       <field>
         <column_name>sales_channel_id</column_name>
@@ -741,48 +737,32 @@ These would be defined in the project.properties file</note>
         <stream_name>lens_name</stream_name>
       </field>
       <field>
-        <column_name>lens_year</column_name>
-        <stream_name>lens_year</stream_name>
+        <column_name>fmin</column_name>
+        <stream_name>fmin</stream_name>
       </field>
       <field>
-        <column_name>focal_length_min</column_name>
-        <stream_name>focal_length_min</stream_name>
+        <column_name>fmax</column_name>
+        <stream_name>fmax</stream_name>
       </field>
       <field>
-        <column_name>focal_length_max</column_name>
-        <stream_name>focal_length_max</stream_name>
+        <column_name>amin</column_name>
+        <stream_name>amin</stream_name>
       </field>
       <field>
-        <column_name>aperture_max</column_name>
-        <stream_name>aperture_max</stream_name>
+        <column_name>amax</column_name>
+        <stream_name>amax</stream_name>
       </field>
       <field>
-        <column_name>aperture_min</column_name>
-        <stream_name>aperture_min</stream_name>
+        <column_name>FocusMin</column_name>
+        <stream_name>FocusMin</stream_name>
       </field>
       <field>
-        <column_name>focusing_distance_min</column_name>
-        <stream_name>focusing_distance_min</stream_name>
-      </field>
-      <field>
-        <column_name>filter_size</column_name>
-        <stream_name>filter_size</stream_name>
+        <column_name>Filter</column_name>
+        <stream_name>Filter</stream_name>
       </field>
       <field>
         <column_name>lens_category</column_name>
         <stream_name>lens_category</stream_name>
-      </field>
-      <field>
-        <column_name>customer_name</column_name>
-        <stream_name>customer_name</stream_name>
-      </field>
-      <field>
-        <column_name>address</column_name>
-        <stream_name>address</stream_name>
-      </field>
-      <field>
-        <column_name>city</column_name>
-        <stream_name>city</stream_name>
       </field>
       <field>
         <column_name>store_id</column_name>
@@ -800,6 +780,10 @@ These would be defined in the project.properties file</note>
         <column_name>store_city</column_name>
         <stream_name>store_city</stream_name>
       </field>
+      <field>
+        <column_name>sales_id</column_name>
+        <stream_name>sales_id</stream_name>
+      </field>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -809,84 +793,8 @@ These would be defined in the project.properties file</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Join Raw SLS tables</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <sql>SELECT
-s.sales_id
-, s.date AS sale_date
-, s.customer_id
-, s.sales_channel_id
-, sc.sales_channel
-, s.amount AS sales
-, l.lens_id
-, l.name AS lens_name
-, l.year AS lens_year
-, l.focal_length_min
-, l.focal_length_max
-, l.aperture_max
-, l.aperture_min
-, l.focusing_distance_min
-, l.filter_size
-, lc.lens_category
-, c.name AS customer_name
-, c.address
-, c.city
-, s.store_id
-, st.store_name
-, st.store_country
-, st.store_city
-FROM
-sls_raw.sales s
-LEFT JOIN 
-sls_raw.lens l
-ON
-s.lens_id = l.lens_id
-LEFT JOIN
-sls_raw.lens_category lc
-ON
-l.lens_category_id = lc.lens_category_id
-LEFT JOIN
-sls_raw.sales_channel sc
-ON
-s.sales_channel_id = sc.sales_channel_id
-LEFT JOIN
-sls_raw.customer c
-ON
-s.customer_id = c.customer_id
-LEFT JOIN
-sls_raw.store st
-ON
-s.store_id = st.store_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>160</xloc>
-      <yloc>576</yloc>
+      <xloc>512</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -918,8 +826,8 @@ s.store_id = st.store_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>576</yloc>
+      <xloc>256</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -959,7 +867,7 @@ s.store_id = st.store_id</sql>
         <presorted>N</presorted>
       </field>
       <field>
-        <name>sale_date</name>
+        <name>sales_date</name>
         <ascending>N</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -983,8 +891,85 @@ s.store_id = st.store_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>576</yloc>
+      <xloc>384</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Join SLS_RAW tables</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SLS_RAW</connection>
+    <sql>SELECT
+  s.date as sales_date
+, s.customer_id
+, c.name AS customer_name
+, c.last_name
+, c.first_name
+, c.country
+, c.city
+, c.address
+, s.sales_channel_id
+, sc.sales_channel
+, s.amount as sales
+, l.lens_id
+, l.name AS lens_name
+, l.fmin
+, l.fmax
+, l.amin
+, l.amax
+, l.FocusMin
+, l.Filter
+, lc.lens_category
+, s.store_id
+, st.store_name
+, st.store_country
+, st.store_city
+, s.sales_id
+FROM sls_raw.sales s
+LEFT JOIN
+sls_raw.customer c
+ON
+s.customer_id = c.customer_id
+LEFT JOIN
+sls_raw.sales_channel sc
+ON
+s.sales_channel_id = sc.sales_channel_id
+LEFT JOIN 
+sls_raw.lens l
+ON
+s.lens_id = l.lens_id
+LEFT JOIN
+sls_raw.lens_category lc
+ON
+l.lens_category_id = lc.lens_category_id
+LEFT JOIN
+sls_raw.store st
+ON
+s.store_id = st.store_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -997,8 +982,12 @@ s.store_id = st.store_id</sql>
     <group>
       <name>explorerState</name>
       <attribute>
+        <key>Join SLS_RAW tables</key>
+        <value/>
+      </attribute>
+      <attribute>
         <key>FACT Sales Table</key>
-        <value>{"tabs":{"list":[{"type":"Pivot Table","visualization":{"typeId":"pentaho-pivot-table-viz-impl_8.0.0.3-195/pivot/model","model":{"rows":{"attributes":["Geography_City","Sales channel_Sales channel"]},"columns":{"attributes":["Lens category_Lens category","Filter size_Filter size"]},"measures":{"attributes":["Measures_Sales"]}},"visualModel":{"rows":{"attributes":["Geography_City","Sales channel_Sales channel"]},"columns":{"attributes":["Lens category_Lens category","Filter size_Filter size"]},"measures":{"attributes":["Measures_Sales"]}},"hasFieldsSelected":true,"fieldsLabels":[{"id":"sale_id:number","label":"Sale id"},{"id":"sale_date:date","label":"Sale date"},{"id":"customer_id:number","label":"Customer id"},{"id":"sales_channel_id:number","label":"Sales channel id"},{"id":"sales_channel:defaultType","label":"Sales channel"},{"id":"sales:number","label":"Sales"},{"id":"lens_id:number","label":"Lens id"},{"id":"lens_name:defaultType","label":"Lens name"},{"id":"lens_year:number","label":"Lens year"},{"id":"focal_length_min:number","label":"Focal length min"},{"id":"focal_length_max:number","label":"Focal length max"},{"id":"aperture_max:number","label":"Aperture max"},{"id":"aperture_min:number","label":"Aperture min"},{"id":"focusing_distance_min:number","label":"Focusing distance min"},{"id":"filter_size:number","label":"Filter size"},{"id":"lens_category:defaultType","label":"Lens category"},{"id":"customer_name:defaultType","label":"Customer name"},{"id":"address:defaultType","label":"Address"},{"id":"city:defaultType","label":"City"},{"id":"Measures_Sales","label":"Sales"},{"id":"Sales channel_Sales channel","label":"Sales channel"},{"id":"Lens year_Lens year","label":"Lens year"},{"id":"Sale date_Sale date","label":"Sale date"},{"id":"Lens category_Lens category","label":"Lens category"},{"id":"Geography_City","label":"City"},{"id":"Filter size_Filter size","label":"Filter size"}]},"id":"JGC9QJN90.KIPEHU4BVLP1","counter":0,"label":"Pivot Table","modeName":"MODEL","isValid":true,"filters":[]}]},"selectedTabId":"JGC9QJN90.KIPEHU4BVLP1"}</value>
+        <value>{"tabs":{"list":[{"type":"Pivot Table","visualization":{"typeId":"pentaho-pivot-table-viz-impl_8.1.0.0-365/pivot/model","model":{"rows":{"fields":["Geography_City","Sales channel_Sales channel"]},"columns":{"fields":["Lens category_Lens category"]},"measures":{"fields":["Measures_Sales"]}},"visualModel":{"rows":{"fields":["Geography_City","Sales channel_Sales channel"]},"columns":{"fields":["Lens category_Lens category"]},"measures":{"fields":["Measures_Sales"]}},"hasFieldsSelected":true,"fieldsLabels":[{"id":"sale_id:number","label":"Sale id"},{"id":"sale_date:date","label":"Sale date"},{"id":"customer_id:number","label":"Customer id"},{"id":"sales_channel_id:number","label":"Sales channel id"},{"id":"sales_channel:defaultType","label":"Sales channel"},{"id":"sales:number","label":"Sales"},{"id":"lens_id:number","label":"Lens id"},{"id":"lens_name:defaultType","label":"Lens name"},{"id":"lens_year:number","label":"Lens year"},{"id":"focal_length_min:number","label":"Focal length min"},{"id":"focal_length_max:number","label":"Focal length max"},{"id":"aperture_max:number","label":"Aperture max"},{"id":"aperture_min:number","label":"Aperture min"},{"id":"focusing_distance_min:number","label":"Focusing distance min"},{"id":"filter_size:number","label":"Filter size"},{"id":"lens_category:defaultType","label":"Lens category"},{"id":"customer_name:defaultType","label":"Customer name"},{"id":"address:defaultType","label":"Address"},{"id":"city:defaultType","label":"City"},{"id":"Measures_Sales","label":"Sales"},{"id":"Sales channel_Sales channel","label":"Sales channel"},{"id":"Lens year_Lens year","label":"Lens year"},{"id":"Sale date_Sale date","label":"Sale date"},{"id":"Lens category_Lens category","label":"Lens category"},{"id":"Geography_City","label":"City"},{"id":"Filter size_Filter size","label":"Filter size"}]},"id":"JGC9QJN90.KIPEHU4BVLP1","counter":0,"label":"Pivot Table","modeName":"MODEL","filters":[],"searchOptions":{"text":"","focus":false,"categoryCollapsed":{},"categoryCollapsedFiltered":{}},"layoutOptions":{"layoutPanelCollapsed":false,"filtersPanelCollapsed":true}}]},"selectedTabId":"JGC9QJN90.KIPEHU4BVLP1"}</value>
       </attribute>
     </group>
   </attributes>

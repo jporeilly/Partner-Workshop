@@ -11,7 +11,7 @@
     <parameters>
       <parameter>
         <name>${VAR_RAW_DATA_FILE}</name>
-        <default_value>C:\Partner_Training\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</default_value>
+        <default_value>C:\Partner_Training\Secondhand_Lens\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</default_value>
         <description>Store data</description>
       </parameter>
     </parameters>
@@ -462,11 +462,13 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
+      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.
+
+For Excel Input hard code the path.</note>
       <xloc>208</xloc>
       <yloc>192</yloc>
-      <width>605</width>
-      <heigth>34</heigth>
+      <width>406</width>
+      <heigth>57</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -486,9 +488,9 @@
       <note>Loads Store table, based on a lookup of Store name.
 This will ensure a store_id is assigned.</note>
       <xloc>208</xloc>
-      <yloc>288</yloc>
-      <width>426</width>
-      <heigth>58</heigth>
+      <yloc>304</yloc>
+      <width>283</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -585,7 +587,7 @@ This will ensure a store_id is assigned.</note>
     </partitioning>
     <valuename>store_id</valuename>
     <use_database>N</use_database>
-    <connection/>
+    <connection>SLS_RAW</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -633,7 +635,7 @@ This will ensure a store_id is assigned.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Partner_Training\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -732,7 +734,7 @@ This will ensure a store_id is assigned.</note>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>N</use_batch>
+    <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -769,7 +771,7 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>688</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>

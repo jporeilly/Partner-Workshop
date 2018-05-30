@@ -9,6 +9,11 @@
     <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
+      <parameter>
+        <name>${VAR_RAW_DATA_FILE}</name>
+        <default_value/>
+        <description>Lens Category data</description>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -437,8 +442,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW Lens Category Table in MySQL </note>
-      <xloc>192</xloc>
-      <yloc>128</yloc>
+      <xloc>176</xloc>
+      <yloc>112</yloc>
       <width>483</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -478,15 +483,36 @@
       <bordercolorblue>192</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
+      <xloc>208</xloc>
+      <yloc>192</yloc>
+      <width>605</width>
+      <heigth>34</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>0</bordercolorgreen>
+      <bordercolorblue>0</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
-    <server>${SLS_RAW.HOST}</server>
+    <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SLS_RAW.DB}</database>
-    <port>${SLS_RAW.PORT}</port>
-    <username>${SLS_RAW.USER}</username>
+    <database>sls_raw</database>
+    <port>3306</port>
+    <username>root</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
     <servername/>
     <data_tablespace/>
@@ -506,7 +532,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${SLS_RAW.PORT}</attribute>
+        <attribute>3306</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -542,11 +568,6 @@
     </hop>
     <hop>
       <from>Lens Category exists?</from>
-      <to>Lens Category</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Lens Category exists?</from>
       <to>Table output - lens _category</to>
       <enabled>Y</enabled>
     </hop>
@@ -568,6 +589,11 @@
     <hop>
       <from>Table input</from>
       <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lens Category exists?</from>
+      <to>Update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -617,30 +643,6 @@
     </GUI>
   </step>
   <step>
-    <name>Lens Category</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Lens Category exists?</name>
     <type>FilterRows</type>
     <description/>
@@ -651,7 +653,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Lens Category</send_true_to>
+    <send_true_to>Update</send_true_to>
     <send_false_to>Table output - lens _category</send_false_to>
     <compare>
       <condition>
@@ -701,8 +703,8 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${PROJECT_CONTENT}/sls_raw/data/</name>
-      <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
+      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -710,18 +712,6 @@
     <fields>
       <field>
         <name>name</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Year</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -807,18 +797,6 @@
       <field>
         <name>Filter</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>lens_id</name>
-        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1017,6 +995,14 @@ FROM lens_category
         <column_name>lens_category</column_name>
         <stream_name>Category</stream_name>
       </field>
+      <field>
+        <column_name>Count</column_name>
+        <stream_name>Count</stream_name>
+      </field>
+      <field>
+        <column_name>lens_category_id</column_name>
+        <stream_name>lens_category_id</stream_name>
+      </field>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -1028,6 +1014,50 @@ FROM lens_category
     <GUI>
       <xloc>1264</xloc>
       <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SLS_RAW</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>lens_category</table>
+      <key>
+        <name>lens_category_id</name>
+        <field>lens_category_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>lens_category</name>
+        <rename>Category</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

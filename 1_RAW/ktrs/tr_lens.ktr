@@ -9,6 +9,11 @@
     <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
+      <parameter>
+        <name>VAR_RAW_DATA_FILE</name>
+        <default_value>C:\Users\jpore\odrive\Amazon Cloud Drive\Workshops\Secondhand Lenses\MySQL\1 create RAW tables\data\secondhand_lens_store_sales_data_raw_data.xlsx</default_value>
+        <description>RAW Data</description>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -484,8 +489,8 @@
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Lens Table in MySQL </note>
-      <xloc>256</xloc>
-      <yloc>160</yloc>
+      <xloc>272</xloc>
+      <yloc>96</yloc>
       <width>391</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -501,6 +506,27 @@
       <bordercolorred>255</bordercolorred>
       <bordercolorgreen>255</bordercolorgreen>
       <bordercolorblue>255</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
+      <xloc>288</xloc>
+      <yloc>176</yloc>
+      <width>605</width>
+      <heigth>34</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>0</bordercolorgreen>
+      <bordercolorblue>0</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
@@ -528,12 +554,12 @@ Lookups on category_id &amp; lens_id.</note>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
-    <server>${SLS_RAW.HOST}</server>
+    <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SLS_RAW.DB}</database>
-    <port>${SLS_RAW.PORT}</port>
-    <username>${SLS_RAW.USER}</username>
+    <database>sls_raw</database>
+    <port>3306</port>
+    <username>root</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
     <servername/>
     <data_tablespace/>
@@ -553,7 +579,7 @@ Lookups on category_id &amp; lens_id.</note>
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${SLS_RAW.PORT}</attribute>
+        <attribute>3306</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -772,8 +798,8 @@ Lookups on category_id &amp; lens_id.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${PROJECT_CONTENT}/sls_raw/data/</name>
-      <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
+      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -782,18 +808,6 @@ Lookups on category_id &amp; lens_id.</note>
       <field>
         <name>name</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Year</name>
-        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -817,7 +831,7 @@ Lookups on category_id &amp; lens_id.</note>
       </field>
       <field>
         <name>FMin</name>
-        <type>Integer</type>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -829,7 +843,7 @@ Lookups on category_id &amp; lens_id.</note>
       </field>
       <field>
         <name>FMax</name>
-        <type>Integer</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -853,7 +867,7 @@ Lookups on category_id &amp; lens_id.</note>
       </field>
       <field>
         <name>AMin</name>
-        <type>Number</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -865,7 +879,7 @@ Lookups on category_id &amp; lens_id.</note>
       </field>
       <field>
         <name>FocusMin</name>
-        <type>Integer</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -877,7 +891,7 @@ Lookups on category_id &amp; lens_id.</note>
       </field>
       <field>
         <name>Filter</name>
-        <type>Integer</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -960,15 +974,31 @@ Lookups on category_id &amp; lens_id.</note>
         <stream_name>name</stream_name>
       </field>
       <field>
-        <column_name>year</column_name>
-        <stream_name>Year</stream_name>
+        <column_name>Category</column_name>
+        <stream_name>Category</stream_name>
       </field>
       <field>
-        <column_name>focusing_distance_min</column_name>
+        <column_name>FMin</column_name>
+        <stream_name>FMin</stream_name>
+      </field>
+      <field>
+        <column_name>FMax</column_name>
+        <stream_name>FMax</stream_name>
+      </field>
+      <field>
+        <column_name>AMax</column_name>
+        <stream_name>AMax</stream_name>
+      </field>
+      <field>
+        <column_name>AMin</column_name>
+        <stream_name>AMin</stream_name>
+      </field>
+      <field>
+        <column_name>FocusMin</column_name>
         <stream_name>FocusMin</stream_name>
       </field>
       <field>
-        <column_name>filter_size</column_name>
+        <column_name>Filter</column_name>
         <stream_name>Filter</stream_name>
       </field>
       <field>
@@ -976,20 +1006,8 @@ Lookups on category_id &amp; lens_id.</note>
         <stream_name>lens_category_id</stream_name>
       </field>
       <field>
-        <column_name>focal_length_min</column_name>
-        <stream_name>FMin</stream_name>
-      </field>
-      <field>
-        <column_name>focal_length_max</column_name>
-        <stream_name>FMax</stream_name>
-      </field>
-      <field>
-        <column_name>aperture_max</column_name>
-        <stream_name>AMax</stream_name>
-      </field>
-      <field>
-        <column_name>aperture_min</column_name>
-        <stream_name>AMin</stream_name>
+        <column_name>lens_id</column_name>
+        <stream_name>lens_id</stream_name>
       </field>
     </fields>
     <cluster_schema/>
@@ -1032,31 +1050,35 @@ Lookups on category_id &amp; lens_id.</note>
         <name2/>
       </key>
       <value>
-        <name>year</name>
-        <rename>Year</rename>
+        <name>name</name>
+        <rename>name</rename>
       </value>
       <value>
-        <name>focal_length_min</name>
+        <name>Category</name>
+        <rename>Category</rename>
+      </value>
+      <value>
+        <name>FMin</name>
         <rename>FMin</rename>
       </value>
       <value>
-        <name>focal_length_max</name>
+        <name>FMax</name>
         <rename>FMax</rename>
       </value>
       <value>
-        <name>aperture_max</name>
+        <name>AMax</name>
         <rename>AMax</rename>
       </value>
       <value>
-        <name>aperture_min</name>
+        <name>AMin</name>
         <rename>AMin</rename>
       </value>
       <value>
-        <name>focusing_distance_min</name>
+        <name>FocusMin</name>
         <rename>FocusMin</rename>
       </value>
       <value>
-        <name>filter_size</name>
+        <name>Filter</name>
         <rename>Filter</rename>
       </value>
       <value>

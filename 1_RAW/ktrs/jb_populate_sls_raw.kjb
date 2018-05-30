@@ -390,7 +390,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>320</xloc>
-      <yloc>464</yloc>
+      <yloc>368</yloc>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_lens.ktr</name>
@@ -426,7 +426,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>816</xloc>
-      <yloc>464</yloc>
+      <yloc>368</yloc>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_sales.ktr</name>
@@ -462,7 +462,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1104</xloc>
-      <yloc>464</yloc>
+      <yloc>368</yloc>
     </entry>
     <entry>
       <name>Success</name>
@@ -472,7 +472,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1344</xloc>
-      <yloc>464</yloc>
+      <yloc>368</yloc>
     </entry>
     <entry>
       <name>Abort job</name>
@@ -483,7 +483,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>816</xloc>
-      <yloc>736</yloc>
+      <yloc>640</yloc>
     </entry>
     <entry>
       <name>jb_populate_sls_raw_lc_c_st_sc</name>
@@ -517,7 +517,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>528</xloc>
-      <yloc>464</yloc>
+      <yloc>368</yloc>
     </entry>
   </entries>
   <hops>
@@ -613,7 +613,7 @@ as each lens is associated with a category</note>
     <notepad>
       <note>Define Spreadsheet file in Job Settings > Parameters.</note>
       <xloc>320</xloc>
-      <yloc>368</yloc>
+      <yloc>272</yloc>
       <width>426</width>
       <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
