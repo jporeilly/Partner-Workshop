@@ -621,6 +621,48 @@ After the initial load, then any Type II changes to the Customer record result i
     </hop>
   </order>
   <step>
+    <name>Table input - sls_raw.customer</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SLS_RAW</connection>
+    <sql>SELECT
+  customer_id
+, name as customer_name
+, first_name
+, last_name
+, address
+, city
+, country
+, last_updated
+FROM 
+sls_raw.customer
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>dim_customer</name>
     <type>DimensionLookup</type>
     <description/>
@@ -649,17 +691,27 @@ After the initial load, then any Type II changes to the Customer record result i
       <field>
         <name>customer_name</name>
         <lookup>customer_name</lookup>
-        <update>Insert</update>
+        <update>Update</update>
       </field>
       <field>
         <name>address</name>
         <lookup>address</lookup>
-        <update>Insert</update>
+        <update>Update</update>
       </field>
       <field>
         <name>city</name>
         <lookup>city</lookup>
-        <update>Insert</update>
+        <update>Update</update>
+      </field>
+      <field>
+        <name>country</name>
+        <lookup>country</lookup>
+        <update>Update</update>
+      </field>
+      <field>
+        <name>last_updated</name>
+        <lookup>last_updated</lookup>
+        <update>Update</update>
       </field>
       <return>
         <name>customer_tk</name>
@@ -691,46 +743,6 @@ After the initial load, then any Type II changes to the Customer record result i
       <draw>Y</draw>
     </GUI>
   </step>
-  <step>
-    <name>Table input - sls_raw.customer</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <sql>SELECT
-  customer_id
-, name AS customer_name
-, address
-, city
-, country
-, last_updated
-FROM 
-sls_raw.customer
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
@@ -739,14 +751,6 @@ sls_raw.customer
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>dim_customer</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>Table input - sls_raw.customer</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

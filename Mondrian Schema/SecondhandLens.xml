@@ -51,13 +51,17 @@
       <Hierarchy name="Customer" visible="true" hasAll="true" allMemberName="All Customers" primaryKey="customer_tk">
         <Table name="dim_customer">
         </Table>
-        <Level name="Customer Name" visible="true" column="customer_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-          <Property name="Address" column="address" type="String">
-          </Property>
-        </Level>
         <Level name="Country" visible="true" column="country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="City" visible="true" column="city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Customer Name" visible="true" column="customer_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+          <Property name="Surname" column="last_name" type="String">
+          </Property>
+          <Property name="First Name" column="first_name" type="String">
+          </Property>
+          <Property name="Address" column="address" type="String">
+          </Property>
         </Level>
       </Hierarchy>
     </Dimension>
@@ -66,20 +70,18 @@
         <Table name="dim_lens">
         </Table>
         <Level name="Lens Name" visible="true" column="lens_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-          <Property name="Focal length min" column="focal_length_min" type="Integer">
+          <Property name="Focal length min" column="fmin" type="Integer">
           </Property>
-          <Property name="Focal length max" column="focal_length_max" type="Integer">
+          <Property name="Focal length max" column="fmax" type="Integer">
           </Property>
-          <Property name="Focusing distance min" column="focusing_distance_min" type="Integer">
+          <Property name="Focusing distance min" column="focusmin" type="Integer">
           </Property>
-          <Property name="Aperture min" column="aperture_min" type="Integer">
+          <Property name="Aperture min" column="amin" type="Integer">
           </Property>
-          <Property name="Aperture max" column="aperture_max" type="Integer">
+          <Property name="Aperture max" column="amax" type="Integer">
           </Property>
-          <Property name="Filter size" column="filter_size" type="Integer">
+          <Property name="Filter size" column="filter" type="Integer">
           </Property>
-        </Level>
-        <Level name="Manuafacture Year" visible="true" column="lens_year" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="Category" visible="true" column="lens_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
@@ -91,8 +93,6 @@
       <Hierarchy name="Stores" visible="true" hasAll="true" allMemberName="All Stores" primaryKey="store_tk">
         <Table name="dim_store">
         </Table>
-        <Level name="Store Name" visible="true" column="store_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-        </Level>
         <Level name="Store Country" visible="true" column="store_country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="Store City" visible="true" column="store_city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
@@ -104,6 +104,8 @@
               <![CDATA[City]]>
             </Annotation>
           </Annotations>
+        </Level>
+        <Level name="Store Name" visible="true" column="store_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
