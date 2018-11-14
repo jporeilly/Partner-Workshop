@@ -19,15 +19,15 @@
   * Sales Manager would like to have a high-level view of the overall sales.
 
 #### Phase I
-  * SL can use any security scheme that comes with the product, but all users must have accounts with proper roles and permissions. For future phases,     the platform needs to be integrated with Active Directory.
+  * SL can use any security scheme that comes with the product, but all users must have accounts with proper roles and permissions. For future phases, the platform needs to be integrated with Active Directory.
   * SL’s IT environment, has a development and a production environment.  Code or artifacts need to be promoted from a source control repository.
-  * The platform will not have direct network access to the production database. Data file extracts can be placed in any location for the platform to      process them.
+  * The platform will not have direct network access to the production database. Data file extracts can be placed in any location for the platform to process them.
   * The data files are extracted several times during day to keep the reporting data as up to date as possible.
   * Development and production environments are on virtual servers running Ubuntu Linux.
 
 #### Phase II
   * SL would like to extend the application to support reports for store managers such that they can only see the performance of their own stores.
-  * SL is in the process of implementing a portal for their employees, store personnel and customers which goes live next year. They would like to         know how they can leverage the Pentaho platform for reporting and analytics within their web application. 
+  * SL is in the process of implementing a portal for their employees, store personnel and customers which goes live next year. They would like to know how they can leverage the Pentaho platform for reporting and analytics within their web application. 
 
 
 ### Audience
