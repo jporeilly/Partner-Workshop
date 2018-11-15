@@ -10,8 +10,8 @@
     <directory>/</directory>
     <parameters>
       <parameter>
-        <name>${VAR_RAW_DATA_FILE}</name>
-        <default_value/>
+        <name>${RAW_DATA_FILE}</name>
+        <default_value>C:\Partner_Training\Secondhand_Lens\Projects\pr_sls_dwh\input</default_value>
         <description>Customer data</description>
       </parameter>
     </parameters>
@@ -444,9 +444,9 @@
       <note>Loads Customer table, based on a lookup of Customer name.
 This will ensure a customer_id is assigned.</note>
       <xloc>272</xloc>
-      <yloc>240</yloc>
-      <width>333</width>
-      <heigth>42</heigth>
+      <yloc>208</yloc>
+      <width>498</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -484,10 +484,10 @@ This will ensure a customer_id is assigned.</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
+      <note>The variable: ${V_RAW_DATA_FILE} needs to defined as a Project variable.</note>
       <xloc>272</xloc>
       <yloc>144</yloc>
-      <width>406</width>
+      <width>392</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -612,6 +612,7 @@ This will ensure a customer_id is assigned.</note>
         </value>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -620,8 +621,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>352</yloc>
+      <xloc>640</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -659,6 +660,7 @@ This will ensure a customer_id is assigned.</note>
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -668,7 +670,7 @@ This will ensure a customer_id is assigned.</note>
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>352</yloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -699,7 +701,7 @@ This will ensure a customer_id is assigned.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <name>C:\Partner_Training\Day 2\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -708,30 +710,6 @@ This will ensure a customer_id is assigned.</note>
     <fields>
       <field>
         <name>name</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>last_name</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>first_name</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -780,7 +758,7 @@ This will ensure a customer_id is assigned.</note>
       </field>
       <field>
         <name>last_updated</name>
-        <type>Timestamp</type>
+        <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -816,6 +794,7 @@ This will ensure a customer_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -825,7 +804,7 @@ This will ensure a customer_id is assigned.</note>
     </remotesteps>
     <GUI>
       <xloc>272</xloc>
-      <yloc>352</yloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -863,14 +842,6 @@ This will ensure a customer_id is assigned.</note>
         <stream_name>name</stream_name>
       </field>
       <field>
-        <column_name>last_name</column_name>
-        <stream_name>last_name</stream_name>
-      </field>
-      <field>
-        <column_name>first_name</column_name>
-        <stream_name>first_name</stream_name>
-      </field>
-      <field>
         <column_name>address</column_name>
         <stream_name>address</stream_name>
       </field>
@@ -886,11 +857,8 @@ This will ensure a customer_id is assigned.</note>
         <column_name>last_updated</column_name>
         <stream_name>last_updated</stream_name>
       </field>
-      <field>
-        <column_name>customer_id</column_name>
-        <stream_name>customer_id</stream_name>
-      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -899,8 +867,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>352</yloc>
+      <xloc>800</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -931,18 +899,6 @@ This will ensure a customer_id is assigned.</note>
         <name2/>
       </key>
       <value>
-        <name>name</name>
-        <rename>name</rename>
-      </value>
-      <value>
-        <name>last_name</name>
-        <rename>last_name</rename>
-      </value>
-      <value>
-        <name>first_name</name>
-        <rename>first_name</rename>
-      </value>
-      <value>
         <name>address</name>
         <rename>address</rename>
       </value>
@@ -951,14 +907,11 @@ This will ensure a customer_id is assigned.</note>
         <rename>city</rename>
       </value>
       <value>
-        <name>country</name>
-        <rename>country</rename>
-      </value>
-      <value>
         <name>last_updated</name>
         <rename>last_updated</rename>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -967,8 +920,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>464</yloc>
+      <xloc>640</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -977,4 +930,5 @@ This will ensure a customer_id is assigned.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

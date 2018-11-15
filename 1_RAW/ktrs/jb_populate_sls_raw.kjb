@@ -12,7 +12,7 @@
   <modified_date>2013/05/04 21:56:04.187</modified_date>
   <parameters>
     <parameter>
-      <name>VAR_RAW_DATA_FILE</name>
+      <name>V_RAW_DATA_FILE</name>
       <default_value>C:\Users\jpore\odrive\Amazon Cloud Drive\Workshop\Secondhand Lenses\MySQL\1 create STG_TABLES\secondhand_lens_store_sales_data.xlsx</default_value>
       <description/>
     </parameter>
@@ -376,6 +376,7 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -390,12 +391,14 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>320</xloc>
-      <yloc>368</yloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_lens.ktr</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/tr_lens.ktr</filename>
@@ -425,13 +428,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>816</xloc>
-      <yloc>368</yloc>
+      <xloc>656</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_sales.ktr</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/tr_sales.ktr</filename>
@@ -461,38 +466,45 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1104</xloc>
-      <yloc>368</yloc>
+      <xloc>832</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
+      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1344</xloc>
-      <yloc>368</yloc>
+      <xloc>960</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Abort job</name>
       <description/>
       <type>ABORT</type>
+      <attributes/>
       <message>job failed</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>816</xloc>
-      <yloc>640</yloc>
+      <xloc>656</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>jb_populate_sls_raw_lc_c_st_sc</name>
       <description/>
       <type>JOB</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
       <filename>${Internal.Entry.Current.Directory}/jb_populate_sls_raw_lc_c_st_sc.kjb</filename>
       <jobname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -516,8 +528,9 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>528</xloc>
-      <yloc>368</yloc>
+      <xloc>480</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
@@ -592,7 +605,7 @@
 The lens_category table has to be created before the lens table, 
 as each lens is associated with a category</note>
       <xloc>320</xloc>
-      <yloc>176</yloc>
+      <yloc>160</yloc>
       <width>512</width>
       <heigth>107</heigth>
       <fontname>Segoe UI</fontname>
@@ -613,9 +626,9 @@ as each lens is associated with a category</note>
     <notepad>
       <note>Define Spreadsheet file in Job Settings > Parameters.</note>
       <xloc>320</xloc>
-      <yloc>272</yloc>
-      <width>426</width>
-      <heigth>34</heigth>
+      <yloc>256</yloc>
+      <width>285</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -635,8 +648,8 @@ as each lens is associated with a category</note>
       <note>Populate SLS_RAW Tables in MySQL </note>
       <xloc>320</xloc>
       <yloc>112</yloc>
-      <width>352</width>
-      <heigth>37</heigth>
+      <width>235</width>
+      <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>

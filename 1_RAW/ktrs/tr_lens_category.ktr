@@ -442,8 +442,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW Lens Category Table in MySQL </note>
-      <xloc>176</xloc>
-      <yloc>112</yloc>
+      <xloc>208</xloc>
+      <yloc>128</yloc>
       <width>483</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -465,9 +465,9 @@
       <note>Creates / Loads a Lens_Category table, based on the Category field. 
  * Some of the values are null.</note>
       <xloc>208</xloc>
-      <yloc>288</yloc>
-      <width>547</width>
-      <heigth>58</heigth>
+      <yloc>272</yloc>
+      <width>367</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -484,11 +484,11 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
+      <note>The variable: ${V_RAW_DATA_FILE} needs to defined as a Project variable.</note>
       <xloc>208</xloc>
       <yloc>192</yloc>
-      <width>605</width>
-      <heigth>34</heigth>
+      <width>392</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -568,6 +568,11 @@
     </hop>
     <hop>
       <from>Lens Category exists?</from>
+      <to>Lens Category</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lens Category exists?</from>
       <to>Table output - lens _category</to>
       <enabled>Y</enabled>
     </hop>
@@ -587,13 +592,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
+      <from>Table input - lens category</from>
       <to>Stream lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Lens Category exists?</from>
-      <to>Update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -629,6 +629,7 @@
         <valuefield/>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -637,8 +638,33 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
+      <xloc>512</xloc>
       <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Lens Category</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -653,7 +679,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Update</send_true_to>
+    <send_true_to>Lens Category</send_true_to>
     <send_false_to>Table output - lens _category</send_false_to>
     <compare>
       <condition>
@@ -663,6 +689,7 @@
         <rightvalue/>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -671,7 +698,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>800</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
@@ -703,7 +730,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <name>C:\Partner_Training\Secondhand_Lens\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -712,6 +739,18 @@
     <fields>
       <field>
         <name>name</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Year</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -806,6 +845,18 @@
         <decimal/>
         <group/>
       </field>
+      <field>
+        <name>lens_id</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
     </fields>
     <sheets>
       <sheet>
@@ -832,6 +883,7 @@
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -873,6 +925,7 @@
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -881,7 +934,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
+      <xloc>368</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
@@ -897,7 +950,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <from>Table input</from>
+    <from>Table input - lens category</from>
     <input_sorted>N</input_sorted>
     <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
@@ -914,6 +967,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -922,13 +976,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
+      <xloc>656</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table input</name>
+    <name>Table input - lens category</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -949,6 +1003,7 @@ FROM lens_category
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -957,7 +1012,7 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
+      <xloc>656</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -995,15 +1050,8 @@ FROM lens_category
         <column_name>lens_category</column_name>
         <stream_name>Category</stream_name>
       </field>
-      <field>
-        <column_name>Count</column_name>
-        <stream_name>Count</stream_name>
-      </field>
-      <field>
-        <column_name>lens_category_id</column_name>
-        <stream_name>lens_category_id</stream_name>
-      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1012,52 +1060,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
+      <xloc>960</xloc>
       <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Update</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>100</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>lens_category</table>
-      <key>
-        <name>lens_category_id</name>
-        <field>lens_category_id</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>lens_category</name>
-        <rename>Category</rename>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1066,4 +1070,13 @@ FROM lens_category
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>Table input - lens category</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

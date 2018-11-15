@@ -4,7 +4,6 @@
   <description/>
   <extended_description/>
   <job_version/>
-  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2018/05/03 08:50:21.439</created_date>
@@ -380,7 +379,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Entry.Current.Directory}/tr_lens_category.ktr</filename>
+      <filename>C:\Partner_Training\1_RAW\ktrs\tr_lens_category.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -488,7 +487,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Entry.Current.Directory}/tr_store.ktr</filename>
+      <filename>C:\Partner_Training\1_RAW\ktrs\tr_store.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -582,13 +581,6 @@ Ensure Lens Category is loaded before Lens due to lookup.</note>
     </notepad>
   </notepads>
   <attributes>
-    <group>
-      <name>JobRestart</name>
-      <attribute>
-        <key>UniqueConnections</key>
-        <value>N</value>
-      </attribute>
-    </group>
     <group>
       <name>METASTORE.pentaho</name>
       <attribute>

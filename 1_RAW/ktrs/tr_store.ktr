@@ -462,12 +462,12 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.
+      <note>The variable: ${V_RAW_DATA_FILE} needs to defined as a Project variable.
 
 For Excel Input hard code the path.</note>
-      <xloc>208</xloc>
-      <yloc>192</yloc>
-      <width>406</width>
+      <xloc>176</xloc>
+      <yloc>160</yloc>
+      <width>392</width>
       <heigth>57</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -487,8 +487,8 @@ For Excel Input hard code the path.</note>
     <notepad>
       <note>Loads Store table, based on a lookup of Store name.
 This will ensure a store_id is assigned.</note>
-      <xloc>208</xloc>
-      <yloc>304</yloc>
+      <xloc>176</xloc>
+      <yloc>272</yloc>
       <width>283</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
@@ -595,6 +595,7 @@ This will ensure a store_id is assigned.</note>
     <start_at>1</start_at>
     <increment_by>1</increment_by>
     <max_value>999999999</max_value>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -603,8 +604,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>400</yloc>
+      <xloc>320</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -635,7 +636,7 @@ This will ensure a store_id is assigned.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
+      <name>C:\Partner_Training\Secondhand_Lens\Projects\pr_sls_dwh\input\secondhand_lens_store_sales_data_raw.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -704,6 +705,7 @@ This will ensure a store_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -712,8 +714,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>400</yloc>
+      <xloc>176</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -734,7 +736,7 @@ This will ensure a store_id is assigned.</note>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
+    <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -763,6 +765,7 @@ This will ensure a store_id is assigned.</note>
         <stream_name>store_id</stream_name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -771,8 +774,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>400</yloc>
+      <xloc>448</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -781,4 +784,5 @@ This will ensure a store_id is assigned.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>
