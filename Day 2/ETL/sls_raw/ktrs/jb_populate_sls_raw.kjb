@@ -371,6 +371,7 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -384,13 +385,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
-      <yloc>288</yloc>
+      <xloc>112</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_lens.ktr</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/tr_lens.ktr</filename>
@@ -420,13 +423,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>768</xloc>
-      <yloc>288</yloc>
+      <xloc>544</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>tr_populate_sls_raw_sales.ktr</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/tr_sales.ktr</filename>
@@ -456,38 +461,45 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>928</xloc>
-      <yloc>288</yloc>
+      <xloc>704</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
+      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1072</xloc>
-      <yloc>288</yloc>
+      <xloc>848</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Abort job</name>
       <description/>
       <type>ABORT</type>
+      <attributes/>
       <message>job failed</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>768</xloc>
-      <yloc>416</yloc>
+      <xloc>544</xloc>
+      <yloc>400</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>jb_populate_sls_raw_lc_c_st_sc</name>
       <description/>
       <type>JOB</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
       <filename>${Internal.Entry.Current.Directory}/jb_populate_sls_raw_lc_c_st_sc.kjb</filename>
       <jobname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -511,17 +523,20 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>608</xloc>
-      <yloc>288</yloc>
+      <xloc>384</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>jb_sys_check</name>
       <description/>
       <type>JOB</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
       <filename/>
       <jobname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -545,8 +560,9 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>288</yloc>
+      <xloc>240</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
@@ -629,8 +645,8 @@
 
 The lens_category table has to be created before the lens table, 
 as each lens is associated with a category</note>
-      <xloc>320</xloc>
-      <yloc>160</yloc>
+      <xloc>112</xloc>
+      <yloc>176</yloc>
       <width>512</width>
       <heigth>107</heigth>
       <fontname>Segoe UI</fontname>
@@ -650,7 +666,7 @@ as each lens is associated with a category</note>
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Tables in MySQL </note>
-      <xloc>320</xloc>
+      <xloc>112</xloc>
       <yloc>112</yloc>
       <width>235</width>
       <heigth>28</heigth>
