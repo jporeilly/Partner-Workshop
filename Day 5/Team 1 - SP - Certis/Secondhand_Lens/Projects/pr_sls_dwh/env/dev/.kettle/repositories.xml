@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+  <repository>    <id>PentahoEnterpriseRepository</id>
+    <name>certis</name>
+    <description>Pentaho repository | http://10.70.37.110:8080/pentaho</description>
+    <is_default>false</is_default>
+    <repository_location_url>http://10.70.37.110:8080/pentaho</repository_location_url>
+    <version_comment_mandatory>N</version_comment_mandatory>
+  </repository>  </repositories>

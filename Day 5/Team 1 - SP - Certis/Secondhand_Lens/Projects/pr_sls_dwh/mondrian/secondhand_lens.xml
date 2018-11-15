@@ -1,0 +1,104 @@
+<Schema name="SecondhandLens">
+  <Dimension type="TimeDimension" visible="true" name="TIME">
+    <Hierarchy name="Time" visible="true" hasAll="true" allMemberName="All Time" primaryKey="date_tk">
+      <Table name="dim_date" alias="">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="AnalyzerDateFormat">
+            <![CDATA[[yyyy]]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="Quarter" visible="true" column="quarter" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="AnalyzerDateFormat">
+            <![CDATA[]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="Month" visible="true" column="month" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        <Annotations>
+        </Annotations>
+      </Level>
+      <Level name="Month Long" visible="true" column="month_long" ordinalColumn="month" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of Year" visible="true" column="week_of_year" type="String" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="AnalyzerDateFormat">
+            <![CDATA[[yyyy].[q].[M].[w]]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="Day of the Week" visible="true" column="day_of_week" type="Integer" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="AnalyzerDateFormat">
+            <![CDATA[]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="Day Long" visible="true" column="day_of_week_long" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="FY_2017" visible="true" cache="true" enabled="true">
+    <Table name="fact_sales" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="customer_tk" name="CUSTOMER">
+      <Hierarchy name="Customer" visible="true" hasAll="true" primaryKey="customer_tk">
+        <Table name="dim_customer">
+        </Table>
+        <Level name="Country" visible="true" column="country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Customer Name" visible="true" column="customer_name" type="String" uniqueMembers="false" levelType="Regular">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="TIME" name="TIME" visible="true" foreignKey="date_tk">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="store_tk" name="STORES">
+      <Hierarchy name="Stores" visible="true" hasAll="true" allMemberName="All Stores" primaryKey="store_tk">
+        <Table name="dim_store" alias="">
+        </Table>
+        <Level name="Store Country" visible="true" column="store_country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Store City" visible="true" column="store_city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+          <Annotations>
+            <Annotation name="Data.Role">
+              <![CDATA[Geography]]>
+            </Annotation>
+            <Annotation name="Geo.Role">
+              <![CDATA[City]]>
+            </Annotation>
+          </Annotations>
+        </Level>
+        <Level name="Store Name" visible="true" column="store_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sales_channel" name="CHANNEL">
+      <Hierarchy name="Channel" visible="true" hasAll="true" allMemberName="All Channels" primaryKey="sales_channel">
+        <Level name="Channel" visible="true" column="sales_channel" type="String" uniqueMembers="false" levelType="Regular">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="lens_tk" name="LENS">
+      <Hierarchy name="Lenses" visible="true" hasAll="true" allMemberName="All Lenses" primaryKey="lens_tk">
+        <Table name="dim_lens" alias="">
+        </Table>
+        <Level name="Lens Category" visible="true" column="lens_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Lens Name" visible="true" column="lens_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sales_date" name="SALESDATE">
+      <Hierarchy name="SalesDate" visible="true" hasAll="true" allMemberName="All Sales Date" primaryKey="sales_date">
+        <Level name="SalesDate" visible="true" column="sales_date" type="Date" uniqueMembers="false" levelType="Regular">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Total Sales" column="sales" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
