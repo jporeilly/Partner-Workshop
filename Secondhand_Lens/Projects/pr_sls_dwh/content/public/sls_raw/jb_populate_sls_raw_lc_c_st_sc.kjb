@@ -4,6 +4,7 @@
   <description/>
   <extended_description/>
   <job_version/>
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2018/05/03 08:50:21.439</created_date>
@@ -357,6 +358,7 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -372,14 +374,16 @@
       <nr>0</nr>
       <xloc>224</xloc>
       <yloc>352</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
-      <name>lens category</name>
+      <name>lens_category</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_lens_category.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_lens_category.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -408,11 +412,13 @@
       <nr>0</nr>
       <xloc>416</xloc>
       <yloc>176</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>customer</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/tr_customer.ktr</filename>
@@ -444,14 +450,16 @@
       <nr>0</nr>
       <xloc>416</xloc>
       <yloc>320</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
-      <name>sales channels</name>
+      <name>sales_channels</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_sales_channels.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_sales_channels.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -480,14 +488,16 @@
       <nr>0</nr>
       <xloc>416</xloc>
       <yloc>592</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>store</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Partner_Training\1_RAW\ktrs\tr_store.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/tr_store.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -516,12 +526,13 @@
       <nr>0</nr>
       <xloc>416</xloc>
       <yloc>448</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>lens category</to>
+      <to>lens_category</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -539,7 +550,7 @@
     </hop>
     <hop>
       <from>START</from>
-      <to>sales channels</to>
+      <to>sales_channels</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -557,8 +568,57 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Populate SLS_RAW Tables in MySQL </note>
+      <xloc>112</xloc>
+      <yloc>80</yloc>
+      <width>235</width>
+      <heigth>28</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>Y</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Load the tables in parallel</note>
+      <xloc>112</xloc>
+      <yloc>288</yloc>
+      <width>144</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>64</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>64</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <attributes>
+    <group>
+      <name>JobRestart</name>
+      <attribute>
+        <key>UniqueConnections</key>
+        <value>N</value>
+      </attribute>
+    </group>
     <group>
       <name>METASTORE.pentaho</name>
       <attribute>

@@ -438,10 +438,10 @@
     <notepad>
       <note>Loads Customer table, based on a lookup of Customer name.
 This will ensure a customer_id is assigned.</note>
-      <xloc>272</xloc>
-      <yloc>240</yloc>
-      <width>498</width>
-      <heigth>58</heigth>
+      <xloc>192</xloc>
+      <yloc>144</yloc>
+      <width>333</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -452,15 +452,15 @@ This will ensure a customer_id is assigned.</note>
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>255</backgroundcolorgreen>
       <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>192</bordercolorred>
-      <bordercolorgreen>192</bordercolorgreen>
-      <bordercolorblue>192</bordercolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Customer Table in MySQL</note>
-      <xloc>256</xloc>
-      <yloc>128</yloc>
+      <xloc>192</xloc>
+      <yloc>96</yloc>
       <width>434</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -536,69 +536,26 @@ This will ensure a customer_id is assigned.</note>
   </connection>
   <order>
     <hop>
-      <from>Customer exists?</from>
+      <from>customer exists?</from>
       <to>Table output - customer</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Customer exists?</from>
+      <from>customer exists?</from>
       <to>Update customer</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Database lookup - customer_id</from>
-      <to>Customer exists?</to>
+      <to>customer exists?</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>MS Excel Input - Customers</from>
+      <from>MS Excel Input - customers</from>
       <to>Database lookup - customer_id</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Customer exists?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Update customer</send_true_to>
-    <send_false_to>Table output - customer</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>customer_id</leftvalue>
-        <function>&gt;</function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>Integer</type>
-          <text>0</text>
-          <length>-1</length>
-          <precision>0</precision>
-          <isnull>N</isnull>
-          <mask>#;-#</mask>
-        </value>
-      </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>864</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Database lookup - customer_id</name>
     <type>DBLookup</type>
@@ -621,8 +578,14 @@ This will ensure a customer_id is assigned.</note>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>name</name>
-        <field>name</field>
+        <name>full_name</name>
+        <field>full_name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>city</name>
+        <field>city</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -633,6 +596,7 @@ This will ensure a customer_id is assigned.</note>
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -641,13 +605,13 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>352</yloc>
+      <xloc>384</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>MS Excel Input - Customers</name>
+    <name>MS Excel Input - customers</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -673,7 +637,7 @@ This will ensure a customer_id is assigned.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${PROJECT_CONTENT}/sls_raw/data/</name>
+      <name>${PROJECT_INPUT}</name>
       <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -686,7 +650,43 @@ This will ensure a customer_id is assigned.</note>
     </file>
     <fields>
       <field>
-        <name>name</name>
+        <name>prefix</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>first_name</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>surname</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>full_name</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -771,6 +771,7 @@ This will ensure a customer_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -779,8 +780,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>352</yloc>
+      <xloc>208</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -814,8 +815,20 @@ This will ensure a customer_id is assigned.</note>
     <return_field/>
     <fields>
       <field>
-        <column_name>name</column_name>
-        <stream_name>name</stream_name>
+        <column_name>prefix</column_name>
+        <stream_name>prefix</stream_name>
+      </field>
+      <field>
+        <column_name>first_name</column_name>
+        <stream_name>first_name</stream_name>
+      </field>
+      <field>
+        <column_name>surname</column_name>
+        <stream_name>surname</stream_name>
+      </field>
+      <field>
+        <column_name>full_name</column_name>
+        <stream_name>full_name</stream_name>
       </field>
       <field>
         <column_name>address</column_name>
@@ -833,7 +846,12 @@ This will ensure a customer_id is assigned.</note>
         <column_name>last_updated</column_name>
         <stream_name>last_updated</stream_name>
       </field>
+      <field>
+        <column_name>customer_id</column_name>
+        <stream_name>customer_id</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -842,8 +860,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>352</yloc>
+      <xloc>704</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -874,6 +892,22 @@ This will ensure a customer_id is assigned.</note>
         <name2/>
       </key>
       <value>
+        <name>prefix</name>
+        <rename>prefix</rename>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>first_name</rename>
+      </value>
+      <value>
+        <name>surname</name>
+        <rename>surname</rename>
+      </value>
+      <value>
+        <name>full_name</name>
+        <rename>full_name</rename>
+      </value>
+      <value>
         <name>address</name>
         <rename>address</rename>
       </value>
@@ -882,10 +916,15 @@ This will ensure a customer_id is assigned.</note>
         <rename>city</rename>
       </value>
       <value>
+        <name>country</name>
+        <rename>country</rename>
+      </value>
+      <value>
         <name>last_updated</name>
         <rename>last_updated</rename>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -894,8 +933,52 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>480</yloc>
+      <xloc>560</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>customer exists?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Update customer</send_true_to>
+    <send_false_to>Table output - customer</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>customer_id</leftvalue>
+        <function>&gt;</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>0</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>#;-#</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -904,4 +987,9 @@ This will ensure a customer_id is assigned.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
 </transformation>

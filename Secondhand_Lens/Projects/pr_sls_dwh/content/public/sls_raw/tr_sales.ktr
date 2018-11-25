@@ -9,11 +9,6 @@
     <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
-      <parameter>
-        <name>VAR_RAW_DATA_FILE</name>
-        <default_value>C:\Users\jpore\odrive\Amazon Cloud Drive\Workshops\Secondhand Lenses\MySQL\1 create RAW tables\data\secondhand_lens_store_sales_data_raw_data.xlsx</default_value>
-        <description>RAW data</description>
-      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -468,8 +463,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW SalesTable in MySQL </note>
-      <xloc>336</xloc>
-      <yloc>176</yloc>
+      <xloc>80</xloc>
+      <yloc>48</yloc>
       <width>391</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -488,33 +483,12 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
-      <xloc>336</xloc>
-      <yloc>240</yloc>
-      <width>605</width>
-      <heigth>34</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>0</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
       <note>Loads Lens FACT table.
 Lookups for FKs.</note>
-      <xloc>336</xloc>
-      <yloc>320</yloc>
-      <width>190</width>
-      <heigth>58</heigth>
+      <xloc>192</xloc>
+      <yloc>112</yloc>
+      <width>131</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -533,12 +507,12 @@ Lookups for FKs.</note>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
-    <server>localhost</server>
+    <server>${SLS_RAW.HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>sls_raw</database>
-    <port>3306</port>
-    <username>root</username>
+    <database>${SLS_RAW.DB}</database>
+    <port>${SLS_RAW.PORT}</port>
+    <username>${SLS_RAW.USER}</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
     <servername/>
     <data_tablespace/>
@@ -558,7 +532,7 @@ Lookups for FKs.</note>
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
+        <attribute>${SLS_RAW.PORT}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -588,38 +562,38 @@ Lookups for FKs.</note>
   </connection>
   <order>
     <hop>
-      <from>Database lookup lens</from>
-      <to>Database lookup sales channel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup sales channel</from>
-      <to>Database lookup sales customer</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup sales customer</from>
-      <to>Database lookup sales store</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup sales store</from>
-      <to>Table output - sales</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ms Excel Input - Sales</from>
+      <from>Ms Excel Input - sales</from>
       <to>Modified Java Script Value</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Modified Java Script Value</from>
-      <to>Database lookup lens</to>
+      <to>Database lookup - sales customer</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup - sales customer</from>
+      <to>Database lookup - lens</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup - lens</from>
+      <to>Database lookup - sales store</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup - sales store</from>
+      <to>Database lookup - sales channel</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup - sales channel</from>
+      <to>Table output - sales</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database lookup lens</name>
+    <name>Database lookup - lens</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -649,9 +623,10 @@ Lookups for FKs.</note>
         <name>lens_id</name>
         <rename>lens_id</rename>
         <default/>
-        <type>Integer</type>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -660,13 +635,13 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>416</yloc>
+      <xloc>448</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup sales channel</name>
+    <name>Database lookup - sales channel</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -677,7 +652,7 @@ Lookups for FKs.</note>
       <schema_name/>
     </partitioning>
     <connection>SLS_RAW</connection>
-    <cache>Y</cache>
+    <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
@@ -696,9 +671,10 @@ Lookups for FKs.</note>
         <name>sales_channel_id</name>
         <rename>sales_channel_id</rename>
         <default/>
-        <type>Integer</type>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -707,13 +683,13 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>416</yloc>
+      <xloc>448</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup sales customer</name>
+    <name>Database lookup - sales customer</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -724,8 +700,8 @@ Lookups for FKs.</note>
       <schema_name/>
     </partitioning>
     <connection>SLS_RAW</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema/>
@@ -735,7 +711,7 @@ Lookups for FKs.</note>
       <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
         <name>customer</name>
-        <field>name</field>
+        <field>full_name</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -743,9 +719,10 @@ Lookups for FKs.</note>
         <name>customer_id</name>
         <rename>customer_id</rename>
         <default/>
-        <type>Integer</type>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -754,13 +731,13 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>416</yloc>
+      <xloc>448</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup sales store</name>
+    <name>Database lookup - sales store</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -779,7 +756,7 @@ Lookups for FKs.</note>
       <table>store</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
+      <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
         <name>city</name>
         <field>store_city</field>
@@ -789,10 +766,11 @@ Lookups for FKs.</note>
       <value>
         <name>store_id</name>
         <rename>store_id</rename>
-        <default>0</default>
-        <type>Integer</type>
+        <default/>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -801,8 +779,8 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>416</yloc>
+      <xloc>448</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -843,6 +821,7 @@ if (city == null ){
         <replace>Y</replace>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -851,13 +830,13 @@ if (city == null ){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>416</yloc>
+      <xloc>256</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Ms Excel Input - Sales</name>
+    <name>Ms Excel Input - sales</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -883,13 +862,8 @@ if (city == null ){
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name>C:\Partner_Training\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</name>
-      <filemask/>
+      <name>${PROJECT_INPUT}</name>
+      <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -993,6 +967,7 @@ if (city == null ){
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1001,8 +976,8 @@ if (city == null ){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>416</yloc>
+      <xloc>96</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1023,7 +998,7 @@ if (city == null ){
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
+    <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -1044,6 +1019,10 @@ if (city == null ){
         <stream_name>amount</stream_name>
       </field>
       <field>
+        <column_name>lens_id</column_name>
+        <stream_name>lens_id</stream_name>
+      </field>
+      <field>
         <column_name>sales_channel_id</column_name>
         <stream_name>sales_channel_id</stream_name>
       </field>
@@ -1052,14 +1031,11 @@ if (city == null ){
         <stream_name>customer_id</stream_name>
       </field>
       <field>
-        <column_name>lens_id</column_name>
-        <stream_name>lens_id</stream_name>
-      </field>
-      <field>
         <column_name>store_id</column_name>
         <stream_name>store_id</stream_name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1068,8 +1044,8 @@ if (city == null ){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1776</xloc>
-      <yloc>416</yloc>
+      <xloc>608</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

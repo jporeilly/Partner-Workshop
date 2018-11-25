@@ -1,0 +1,7 @@
+
+-- Script to create sls_raw database
+msql> create database sls_raw;
+
+-- Check tables in sls_raw
+msql> use sls_raw;
+msql> show tables;

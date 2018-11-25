@@ -464,10 +464,10 @@
     <notepad>
       <note>Creates / Loads a Lens_Category table, based on the Category field. 
  * Some of the values are null.</note>
-      <xloc>208</xloc>
-      <yloc>288</yloc>
-      <width>547</width>
-      <heigth>58</heigth>
+      <xloc>192</xloc>
+      <yloc>176</yloc>
+      <width>367</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -483,36 +483,15 @@
       <bordercolorblue>192</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
-    <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
-      <xloc>208</xloc>
-      <yloc>192</yloc>
-      <width>605</width>
-      <heigth>34</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>0</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
-    <server>localhost</server>
+    <server>${SLS_RAW.HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>sls_raw</database>
-    <port>3306</port>
-    <username>root</username>
+    <database>${SLS_RAW.DB}</database>
+    <port>${SLS_RAW.PORT}</port>
+    <username>${SLS_RAW.USER}</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
     <servername/>
     <data_tablespace/>
@@ -532,7 +511,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
+        <attribute>${SLS_RAW.PORT}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -562,43 +541,43 @@
   </connection>
   <order>
     <hop>
-      <from>Group by Category</from>
+      <from>Group by - category</from>
       <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Lens Category exists?</from>
-      <to>Lens Category</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Lens Category exists?</from>
+      <from>lens category exists?</from>
       <to>Table output - lens _category</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>MS Excel Input - Lens Category</from>
-      <to>Sort rows category</to>
+      <from>MS Excel Input - lens category</from>
+      <to>Sort rows - category</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows category</from>
-      <to>Group by Category</to>
+      <from>Sort rows - category</from>
+      <to>Group by - category</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Stream lookup</from>
-      <to>Lens Category exists?</to>
+      <to>lens category exists?</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
+      <from>Table input - lens category</from>
       <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lens category exists?</from>
+      <to>Update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Group by Category</name>
+    <name>Group by - category</name>
     <type>GroupBy</type>
     <description/>
     <distribute>Y</distribute>
@@ -629,6 +608,7 @@
         <valuefield/>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -637,71 +617,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>400</yloc>
+      <xloc>528</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Lens Category</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>528</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Lens Category exists?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Lens Category</send_true_to>
-    <send_false_to>Table output - lens _category</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>lens_category_id</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>MS Excel Input - Lens Category</name>
+    <name>MS Excel Input - lens category</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -727,8 +649,8 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Partner_Training\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</name>
-      <filemask/>
+      <name>${PROJECT_INPUT}</name>
+      <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -748,7 +670,7 @@
       </field>
       <field>
         <name>Year</name>
-        <type>String</type>
+        <type>Timestamp</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -772,7 +694,7 @@
       </field>
       <field>
         <name>FMin</name>
-        <type>Number</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -784,7 +706,7 @@
       </field>
       <field>
         <name>FMax</name>
-        <type>String</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -796,7 +718,7 @@
       </field>
       <field>
         <name>AMax</name>
-        <type>Number</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -808,7 +730,7 @@
       </field>
       <field>
         <name>AMin</name>
-        <type>String</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -820,7 +742,7 @@
       </field>
       <field>
         <name>FocusMin</name>
-        <type>String</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -844,7 +766,7 @@
       </field>
       <field>
         <name>lens_id</name>
-        <type>Number</type>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -880,6 +802,7 @@
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -889,12 +812,12 @@
     </remotesteps>
     <GUI>
       <xloc>208</xloc>
-      <yloc>400</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows category</name>
+    <name>Sort rows - category</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -921,6 +844,7 @@
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -929,8 +853,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>400</yloc>
+      <xloc>384</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -945,7 +869,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <from>Table input</from>
+    <from>Table input - lens category</from>
     <input_sorted>N</input_sorted>
     <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
@@ -962,6 +886,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -970,13 +895,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>400</yloc>
+      <xloc>672</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table input</name>
+    <name>Table input - lens category</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -997,6 +922,7 @@ FROM lens_category
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1005,8 +931,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>272</yloc>
+      <xloc>672</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1027,7 +953,7 @@ FROM lens_category
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
+    <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -1043,7 +969,16 @@ FROM lens_category
         <column_name>lens_category</column_name>
         <stream_name>Category</stream_name>
       </field>
+      <field>
+        <column_name>Count</column_name>
+        <stream_name>Count</stream_name>
+      </field>
+      <field>
+        <column_name>lens_category_id</column_name>
+        <stream_name>lens_category_id</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1052,8 +987,92 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>400</yloc>
+      <xloc>976</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SLS_RAW</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>lens_category</table>
+      <key>
+        <name>lens_category_id</name>
+        <field>lens_category_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>lens_category_id</name>
+        <rename>lens_category_id</rename>
+      </value>
+      <value>
+        <name>count</name>
+        <rename>Count</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lens category exists?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Update</send_true_to>
+    <send_false_to>Table output - lens _category</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>lens_category_id</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1062,4 +1081,5 @@ FROM lens_category
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

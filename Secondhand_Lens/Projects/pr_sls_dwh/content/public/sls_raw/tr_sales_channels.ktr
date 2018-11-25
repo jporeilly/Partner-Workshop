@@ -9,11 +9,6 @@
     <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
-      <parameter>
-        <name>${VAR_RAW_DATA_FILE}</name>
-        <default_value/>
-        <description>Sales Channel data</description>
-      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -443,10 +438,10 @@
     <notepad>
       <note>Loads Sales Channel table based on transactions.
 The sales_channel_id is a lookup from the sales_channel table.</note>
-      <xloc>346</xloc>
-      <yloc>242</yloc>
-      <width>494</width>
-      <heigth>58</heigth>
+      <xloc>112</xloc>
+      <yloc>128</yloc>
+      <width>336</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -457,15 +452,15 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>255</backgroundcolorgreen>
       <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>192</bordercolorred>
-      <bordercolorgreen>192</bordercolorgreen>
-      <bordercolorblue>192</bordercolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Sales Channels Table in MySQL </note>
-      <xloc>336</xloc>
-      <yloc>96</yloc>
+      <xloc>112</xloc>
+      <yloc>80</yloc>
       <width>488</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -483,36 +478,15 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
-    <notepad>
-      <note>The variable: ${VAR_RAW_DATA_FILE} needs to defined as a Project variable.</note>
-      <xloc>352</xloc>
-      <yloc>160</yloc>
-      <width>605</width>
-      <heigth>34</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>0</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
-    <server>localhost</server>
+    <server>${SLS_RAW.HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>sls_raw</database>
-    <port>3306</port>
-    <username>root</username>
+    <database>${SLS_RAW.DB}</database>
+    <port>${SLS_RAW.PORT}</port>
+    <username>${SLS_RAW.USER}</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
     <servername/>
     <data_tablespace/>
@@ -532,7 +506,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
+        <attribute>${SLS_RAW.PORT}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -563,32 +537,37 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
   <order>
     <hop>
       <from>Database lookup - sales_channel_id</from>
-      <to>Sales Channel exists?</to>
+      <to>sales channel exists?</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by Sales Channel</from>
+      <from>Group by - sales channel</from>
       <to>Database lookup - sales_channel_id</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ms Excel Input - Sales Channels</from>
-      <to>Sort rows channel</to>
+      <from>sales channel exists?</from>
+      <to>sales channel</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sales Channel exists?</from>
-      <to>Sales Channel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sales Channel exists?</from>
+      <from>sales channel exists?</from>
       <to>Table output - sales_channel</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows channel</from>
-      <to>Group by Sales Channel</to>
+      <from>Sort rows - channel</from>
+      <to>Group by - sales channel</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ms Excel Input - sales channels</from>
+      <to>Value mapper - store</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value mapper - store</from>
+      <to>Sort rows - channel</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -623,9 +602,10 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
         <name>sales_channel_id</name>
         <rename>sales_channel_id</rename>
         <default/>
-        <type>String</type>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -634,13 +614,13 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>986</xloc>
-      <yloc>354</yloc>
+      <xloc>752</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Group by Sales Channel</name>
+    <name>Group by - sales channel</name>
     <type>GroupBy</type>
     <description/>
     <distribute>Y</distribute>
@@ -671,6 +651,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
         <valuefield/>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -679,13 +660,13 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>746</xloc>
-      <yloc>354</yloc>
+      <xloc>560</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Ms Excel Input - Sales Channels</name>
+    <name>Ms Excel Input - sales channels</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -711,8 +692,8 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Partner_Training\1_RAW\data\secondhand_lens_store_sales_data_raw.xlsx</name>
-      <filemask/>
+      <name>${PROJECT_INPUT}</name>
+      <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -816,6 +797,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -824,71 +806,13 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>346</xloc>
-      <yloc>354</yloc>
+      <xloc>112</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sales Channel</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1210</xloc>
-      <yloc>498</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sales Channel exists?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Sales Channel</send_true_to>
-    <send_false_to>Table output - sales_channel</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>sales_channel_id</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1210</xloc>
-      <yloc>354</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows channel</name>
+    <name>Sort rows - channel</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -915,6 +839,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -923,8 +848,8 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>570</xloc>
-      <yloc>354</yloc>
+      <xloc>400</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -945,7 +870,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
+    <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -961,7 +886,12 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
         <column_name>sales_channel</column_name>
         <stream_name>sales_channel</stream_name>
       </field>
+      <field>
+        <column_name>sales_channel_id</column_name>
+        <stream_name>sales_channel_id</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -970,8 +900,102 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1482</xloc>
-      <yloc>354</yloc>
+      <xloc>1136</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>sales channel</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>sales channel exists?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>sales channel</send_true_to>
+    <send_false_to>Table output - sales_channel</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>sales_channel_id</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Value mapper - store</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_to_use>sales_channel</field_to_use>
+    <target_field/>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>instore</source_value>
+        <target_value>store</target_value>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -980,4 +1004,13 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>Value mapper - store</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

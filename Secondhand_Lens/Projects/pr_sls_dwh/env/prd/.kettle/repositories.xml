@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+  <repository>    <id>PentahoEnterpriseRepository</id>
+    <name>Repository</name>
+    <description>Pentaho repository | http://localhost:8080/pentaho</description>
+    <is_default>false</is_default>
+    <repository_location_url>http://localhost:8080/pentaho</repository_location_url>
+    <version_comment_mandatory>N</version_comment_mandatory>
+  </repository>  <repository>    <id>PentahoEnterpriseRepository</id>
+    <name>PRD</name>
+    <description>Pentaho repository | http://localhost:8080/pentaho</description>
+    <is_default>true</is_default>
+    <repository_location_url>http://localhost:8080/pentaho</repository_location_url>
+    <version_comment_mandatory>N</version_comment_mandatory>
+  </repository>  </repositories>

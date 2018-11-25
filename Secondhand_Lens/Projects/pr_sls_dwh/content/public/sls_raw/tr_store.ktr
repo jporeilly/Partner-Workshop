@@ -437,8 +437,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW Lens Category Table in MySQL </note>
-      <xloc>192</xloc>
-      <yloc>192</yloc>
+      <xloc>128</xloc>
+      <yloc>128</yloc>
       <width>483</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -459,10 +459,10 @@
     <notepad>
       <note>Loads Store table, based on a lookup of Store name.
 This will ensure a store_id is assigned.</note>
-      <xloc>208</xloc>
-      <yloc>288</yloc>
-      <width>426</width>
-      <heigth>58</heigth>
+      <xloc>128</xloc>
+      <yloc>176</yloc>
+      <width>283</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -551,13 +551,61 @@ This will ensure a store_id is assigned.</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>MS Excel Input - Store</from>
+      <from>MS Excel Input - store</from>
       <to>Database lookup</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>MS Excel Input - Store</name>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SLS_RAW</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>store</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>store_name</name>
+        <field>store_name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>store_id</name>
+        <rename>store_id</rename>
+        <default>0</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>MS Excel Input - store</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -583,7 +631,7 @@ This will ensure a store_id is assigned.</note>
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${PROJECT_CONTENT}/sls_raw/data/</name>
+      <name>${PROJECT_INPUT}</name>
       <filemask>secondhand_lens_store_sales_data_raw.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -657,6 +705,7 @@ This will ensure a store_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -665,8 +714,52 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>416</yloc>
+      <xloc>128</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Store exist?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Update</send_true_to>
+    <send_false_to>Table output - store</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>store_id</leftvalue>
+        <function>&gt;</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>0</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>####0;-####0</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -716,6 +809,7 @@ This will ensure a store_id is assigned.</note>
         <stream_name>store_id</stream_name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -724,98 +818,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>store</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>store_name</name>
-        <field>store_name</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>store_id</name>
-        <rename>store_id</rename>
-        <default>0</default>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Store exist?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Update</send_true_to>
-    <send_false_to>Table output - store</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>store_id</leftvalue>
-        <function>&gt;</function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>Integer</type>
-          <text>0</text>
-          <length>-1</length>
-          <precision>0</precision>
-          <isnull>N</isnull>
-          <mask>####0;-####0</mask>
-        </value>
-      </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>416</yloc>
+      <xloc>512</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -858,6 +862,7 @@ This will ensure a store_id is assigned.</note>
         <rename>store_country</rename>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -866,8 +871,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>544</yloc>
+      <xloc>384</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -879,10 +884,6 @@ This will ensure a store_id is assigned.</note>
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>Store exist?</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>
