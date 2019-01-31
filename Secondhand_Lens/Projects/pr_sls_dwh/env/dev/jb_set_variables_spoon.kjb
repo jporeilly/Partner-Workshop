@@ -368,6 +368,7 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -383,11 +384,13 @@
       <nr>0</nr>
       <xloc>224</xloc>
       <yloc>256</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>RUNNING</name>
       <description/>
       <type>WRITE_TO_LOG</type>
+      <attributes/>
       <logmessage>---------------</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject>--------------- RUNNING ${P_PROJECT_NAME}</logsubject>
@@ -396,13 +399,15 @@
       <nr>0</nr>
       <xloc>416</xloc>
       <yloc>256</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set variables - job</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
-      <filename>${CONFIG_DIR}/properties/${P_JOB_NAME}.properties</filename>
+      <filename>${CONFIG_DIR}/properties/${P_PROJECT_NAME}.properties</filename>
       <file_variable_type>JVM</file_variable_type>
       <fields>
       </fields>
@@ -411,6 +416,7 @@
       <nr>0</nr>
       <xloc>640</xloc>
       <yloc>256</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
