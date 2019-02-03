@@ -464,8 +464,8 @@ Some of the generic columns are renamed for clarity.
 Use to build prototype model / schema and publish</note>
       <xloc>96</xloc>
       <yloc>128</yloc>
-      <width>359</width>
-      <heigth>89</heigth>
+      <width>529</width>
+      <heigth>131</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -485,8 +485,8 @@ Use to build prototype model / schema and publish</note>
       <note>Data Profiling has revealed that instore maps > store in sales_channel </note>
       <xloc>256</xloc>
       <yloc>464</yloc>
-      <width>377</width>
-      <heigth>26</heigth>
+      <width>561</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -508,8 +508,8 @@ Use to build prototype model / schema and publish</note>
 Uncheck  batch updates.</note>
       <xloc>96</xloc>
       <yloc>224</yloc>
-      <width>399</width>
-      <heigth>57</heigth>
+      <width>594</width>
+      <heigth>83</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
