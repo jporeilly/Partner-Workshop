@@ -487,8 +487,8 @@
 Lookups for FKs.</note>
       <xloc>192</xloc>
       <yloc>112</yloc>
-      <width>131</width>
-      <heigth>42</heigth>
+      <width>190</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -635,7 +635,7 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>576</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -683,7 +683,7 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>576</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -731,7 +731,7 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>576</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
@@ -779,7 +779,7 @@ Lookups for FKs.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>576</xloc>
       <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
@@ -830,7 +830,7 @@ if (city == null ){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
+      <xloc>320</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1044,7 +1044,7 @@ if (city == null ){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
+      <xloc>832</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
