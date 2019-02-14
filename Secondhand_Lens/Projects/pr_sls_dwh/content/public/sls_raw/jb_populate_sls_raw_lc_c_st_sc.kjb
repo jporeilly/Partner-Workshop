@@ -449,7 +449,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>416</xloc>
-      <yloc>320</yloc>
+      <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -572,8 +572,8 @@
       <note>Populate SLS_RAW Tables in MySQL </note>
       <xloc>112</xloc>
       <yloc>80</yloc>
-      <width>235</width>
-      <heigth>28</heigth>
+      <width>352</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -593,8 +593,8 @@
       <note>Load the tables in parallel</note>
       <xloc>112</xloc>
       <yloc>288</yloc>
-      <width>144</width>
-      <heigth>26</heigth>
+      <width>212</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>

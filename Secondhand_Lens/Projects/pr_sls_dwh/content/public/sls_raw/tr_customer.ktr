@@ -440,8 +440,8 @@
 This will ensure a customer_id is assigned.</note>
       <xloc>192</xloc>
       <yloc>144</yloc>
-      <width>333</width>
-      <heigth>42</heigth>
+      <width>498</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -605,7 +605,7 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>400</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -780,7 +780,7 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
+      <xloc>144</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -860,7 +860,7 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>800</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -933,7 +933,7 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>608</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
@@ -977,7 +977,7 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>608</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>

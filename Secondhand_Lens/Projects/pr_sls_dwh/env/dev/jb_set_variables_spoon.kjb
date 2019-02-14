@@ -444,9 +444,9 @@
       <note>P_PROJECT_NAME=sls_dwh
 P_JOB_NAME=populate_sls_dbs</note>
       <xloc>640</xloc>
-      <yloc>352</yloc>
-      <width>261</width>
-      <heigth>58</heigth>
+      <yloc>336</yloc>
+      <width>179</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -487,8 +487,8 @@ P_JOB_NAME=populate_sls_dbs</note>
       <note>This Job needs to be RUN first as it sets the PROJECT variables.</note>
       <xloc>224</xloc>
       <yloc>160</yloc>
-      <width>505</width>
-      <heigth>34</heigth>
+      <width>337</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>

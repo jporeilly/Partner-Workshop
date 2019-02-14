@@ -465,8 +465,8 @@
       <note>Has duplicates... !</note>
       <xloc>128</xloc>
       <yloc>288</yloc>
-      <width>103</width>
-      <heigth>26</heigth>
+      <width>148</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -508,8 +508,8 @@
 Lookups on category_id &amp; lens_id.</note>
       <xloc>112</xloc>
       <yloc>112</yloc>
-      <width>191</width>
-      <heigth>42</heigth>
+      <width>281</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -651,7 +651,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>368</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -699,7 +699,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>608</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -881,7 +881,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
+      <xloc>144</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -961,7 +961,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>944</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1034,7 +1034,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>768</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1078,7 +1078,7 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>768</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>

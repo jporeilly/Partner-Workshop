@@ -440,8 +440,8 @@
 The sales_channel_id is a lookup from the sales_channel table.</note>
       <xloc>112</xloc>
       <yloc>128</yloc>
-      <width>336</width>
-      <heigth>42</heigth>
+      <width>494</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -614,7 +614,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>992</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -660,7 +660,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>736</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -848,7 +848,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>528</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -900,7 +900,41 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1136</xloc>
+      <xloc>1456</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Value mapper - store</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_to_use>sales_channel</field_to_use>
+    <target_field/>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>instore</source_value>
+        <target_value>store</target_value>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -925,7 +959,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
+      <xloc>1248</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -960,41 +994,7 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Value mapper - store</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>sales_channel</field_to_use>
-    <target_field/>
-    <non_match_default/>
-    <fields>
-      <field>
-        <source_value>instore</source_value>
-        <target_value>store</target_value>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>272</xloc>
+      <xloc>1248</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1007,10 +1007,6 @@ The sales_channel_id is a lookup from the sales_channel table.</note>
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>Value mapper - store</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

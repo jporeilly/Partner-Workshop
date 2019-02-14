@@ -423,7 +423,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>384</xloc>
+      <xloc>480</xloc>
       <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
@@ -461,7 +461,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>560</xloc>
+      <xloc>720</xloc>
       <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
@@ -473,7 +473,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>672</xloc>
+      <xloc>880</xloc>
       <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
@@ -486,8 +486,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>384</xloc>
-      <yloc>448</yloc>
+      <xloc>480</xloc>
+      <yloc>512</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -523,7 +523,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>208</xloc>
+      <xloc>240</xloc>
       <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
@@ -622,8 +622,8 @@ as each lens is associated with a category</note>
       <note>Populate SLS_RAW Tables in MySQL </note>
       <xloc>80</xloc>
       <yloc>96</yloc>
-      <width>235</width>
-      <heigth>28</heigth>
+      <width>352</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>

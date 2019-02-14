@@ -464,10 +464,10 @@
     <notepad>
       <note>Creates / Loads a Lens_Category table, based on the Category field. 
  * Some of the values are null.</note>
-      <xloc>192</xloc>
-      <yloc>176</yloc>
-      <width>367</width>
-      <heigth>42</heigth>
+      <xloc>176</xloc>
+      <yloc>192</yloc>
+      <width>547</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -617,8 +617,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>304</yloc>
+      <xloc>544</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -811,8 +811,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>304</yloc>
+      <xloc>160</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -853,8 +853,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>304</yloc>
+      <xloc>368</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -895,8 +895,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>304</yloc>
+      <xloc>704</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -931,8 +931,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>176</yloc>
+      <xloc>704</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -987,8 +987,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>304</yloc>
+      <xloc>1088</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1036,8 +1036,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>416</yloc>
+      <xloc>880</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1071,8 +1071,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>304</yloc>
+      <xloc>880</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
