@@ -442,8 +442,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW Lens Category Table in MySQL </note>
-      <xloc>176</xloc>
-      <yloc>112</yloc>
+      <xloc>48</xloc>
+      <yloc>32</yloc>
       <width>483</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -464,10 +464,10 @@
     <notepad>
       <note>Creates / Loads a Lens_Category table, based on the Category field. 
  * Some of the values are null.</note>
-      <xloc>176</xloc>
-      <yloc>192</yloc>
-      <width>547</width>
-      <heigth>58</heigth>
+      <xloc>48</xloc>
+      <yloc>80</yloc>
+      <width>325</width>
+      <heigth>38</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -481,6 +481,28 @@
       <bordercolorred>192</bordercolorred>
       <bordercolorgreen>192</bordercolorgreen>
       <bordercolorblue>192</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>The table has AI set, so when you conduct an update the key: lens_category_id is added.
+if the transformation is run again, the key already exists so just updates occur.</note>
+      <xloc>96</xloc>
+      <yloc>352</yloc>
+      <width>419</width>
+      <heigth>38</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -617,8 +639,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>416</yloc>
+      <xloc>352</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -802,6 +824,7 @@
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -811,8 +834,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>416</yloc>
+      <xloc>80</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -853,8 +876,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>416</yloc>
+      <xloc>224</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -895,8 +918,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>416</yloc>
+      <xloc>464</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -931,8 +954,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>288</yloc>
+      <xloc>464</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -987,8 +1010,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1088</xloc>
-      <yloc>416</yloc>
+      <xloc>720</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1036,8 +1059,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>528</yloc>
+      <xloc>576</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1071,8 +1094,8 @@ FROM lens_category
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>416</yloc>
+      <xloc>576</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

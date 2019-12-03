@@ -438,8 +438,8 @@
     <notepad>
       <note>Loads Customer table, based on a lookup of Customer name.
 This will ensure a customer_id is assigned.</note>
-      <xloc>192</xloc>
-      <yloc>144</yloc>
+      <xloc>128</xloc>
+      <yloc>96</yloc>
       <width>498</width>
       <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
@@ -459,10 +459,10 @@ This will ensure a customer_id is assigned.</note>
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Customer Table in MySQL</note>
-      <xloc>192</xloc>
-      <yloc>96</yloc>
-      <width>434</width>
-      <heigth>37</heigth>
+      <xloc>128</xloc>
+      <yloc>64</yloc>
+      <width>251</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -476,6 +476,28 @@ This will ensure a customer_id is assigned.</note>
       <bordercolorred>255</bordercolorred>
       <bordercolorgreen>255</bordercolorgreen>
       <bordercolorblue>255</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>The table has AI set, so when you conduct an update the key: customer_id is added.
+if the transformation is run again, the key already exists so just updates occur.</note>
+      <xloc>160</xloc>
+      <yloc>368</yloc>
+      <width>399</width>
+      <heigth>38</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -605,8 +627,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>256</yloc>
+      <xloc>320</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -771,6 +793,7 @@ This will ensure a customer_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -781,7 +804,7 @@ This will ensure a customer_id is assigned.</note>
     </remotesteps>
     <GUI>
       <xloc>144</xloc>
-      <yloc>256</yloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -860,8 +883,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>256</yloc>
+      <xloc>592</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -933,8 +956,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>368</yloc>
+      <xloc>464</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -977,8 +1000,8 @@ This will ensure a customer_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>256</yloc>
+      <xloc>464</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

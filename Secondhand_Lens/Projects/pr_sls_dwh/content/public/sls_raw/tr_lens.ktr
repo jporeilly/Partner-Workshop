@@ -463,10 +463,10 @@
   <notepads>
     <notepad>
       <note>Has duplicates... !</note>
-      <xloc>128</xloc>
-      <yloc>288</yloc>
-      <width>148</width>
-      <heigth>34</heigth>
+      <xloc>80</xloc>
+      <yloc>240</yloc>
+      <width>91</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -484,8 +484,8 @@
     </notepad>
     <notepad>
       <note>Populate SLS_RAW Lens Table in MySQL </note>
-      <xloc>96</xloc>
-      <yloc>64</yloc>
+      <xloc>64</xloc>
+      <yloc>48</yloc>
       <width>391</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -506,8 +506,8 @@
     <notepad>
       <note>Loads the Lens table. 
 Lookups on category_id &amp; lens_id.</note>
-      <xloc>112</xloc>
-      <yloc>112</yloc>
+      <xloc>64</xloc>
+      <yloc>80</yloc>
       <width>281</width>
       <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
@@ -651,8 +651,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>208</yloc>
+      <xloc>224</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -699,8 +699,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>208</yloc>
+      <xloc>368</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -872,6 +872,7 @@ Lookups on category_id &amp; lens_id.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -881,8 +882,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>208</yloc>
+      <xloc>80</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -961,8 +962,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>208</yloc>
+      <xloc>608</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1034,8 +1035,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>336</yloc>
+      <xloc>480</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1078,8 +1079,8 @@ Lookups on category_id &amp; lens_id.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>208</yloc>
+      <xloc>480</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

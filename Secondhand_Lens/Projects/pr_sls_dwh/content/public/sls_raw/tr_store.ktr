@@ -437,8 +437,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_RAW Lens Category Table in MySQL </note>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
+      <xloc>96</xloc>
+      <yloc>64</yloc>
       <width>483</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -459,10 +459,10 @@
     <notepad>
       <note>Loads Store table, based on a lookup of Store name.
 This will ensure a store_id is assigned.</note>
-      <xloc>128</xloc>
-      <yloc>176</yloc>
-      <width>426</width>
-      <heigth>58</heigth>
+      <xloc>96</xloc>
+      <yloc>112</yloc>
+      <width>251</width>
+      <heigth>38</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -476,6 +476,28 @@ This will ensure a store_id is assigned.</note>
       <bordercolorred>192</bordercolorred>
       <bordercolorgreen>192</bordercolorgreen>
       <bordercolorblue>192</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>The table has AI set, so when you conduct an update the key: store_id is added.
+if the transformation is run again, the key already exists so just updates occur.</note>
+      <xloc>96</xloc>
+      <yloc>384</yloc>
+      <width>379</width>
+      <heigth>38</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -599,8 +621,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>288</yloc>
+      <xloc>224</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -705,6 +727,7 @@ This will ensure a store_id is assigned.</note>
     <extensionFieldName/>
     <sizeFieldName/>
     <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -714,8 +737,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>288</yloc>
+      <xloc>96</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -758,8 +781,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>288</yloc>
+      <xloc>336</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -818,8 +841,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>288</yloc>
+      <xloc>448</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -871,8 +894,8 @@ This will ensure a store_id is assigned.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>416</yloc>
+      <xloc>336</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
