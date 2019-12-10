@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_sales_channels</name>
+    <name>tr_store_other_method</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -428,99 +427,13 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/05/03 08:22:58.009</created_date>
+    <created_date>2019/12/10 00:43:16.922</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/05/03 08:22:58.009</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2019/12/10 00:43:16.922</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
-    <notepad>
-      <note>Loads Sales Channel table based on transactions.
-The sales_channel_id is a lookup from the sales_channel table.</note>
-      <xloc>112</xloc>
-      <yloc>128</yloc>
-      <width>494</width>
-      <heigth>58</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Populate SLS_RAW Sales Channels Table in MySQL </note>
-      <xloc>112</xloc>
-      <yloc>80</yloc>
-      <width>488</width>
-      <heigth>37</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>instore is mapped to store for bricks and mortar results</note>
-      <xloc>80</xloc>
-      <yloc>288</yloc>
-      <width>264</width>
-      <heigth>24</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>The table has AI set, so when you conduct an update the key: sales_channel_id is added.
-if the transformation is run again, the key already exists so just updates occur.</note>
-      <xloc>464</xloc>
-      <yloc>240</yloc>
-      <width>419</width>
-      <heigth>38</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
   <connection>
     <name>SLS_RAW</name>
@@ -579,137 +492,18 @@ if the transformation is run again, the key already exists so just updates occur
   </connection>
   <order>
     <hop>
-      <from>Database lookup - sales_channel_id</from>
-      <to>sales channel exists?</to>
+      <from>MS Excel Input - store</from>
+      <to>Add sequence</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by - sales channel</from>
-      <to>Database lookup - sales_channel_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>sales channel exists?</from>
-      <to>Table output - sales_channel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows - channel</from>
-      <to>Group by - sales channel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ms Excel Input - sales channels</from>
-      <to>Value mapper - store</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value mapper - store</from>
-      <to>Sort rows - channel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>sales channel exists?</from>
-      <to>Update</to>
+      <from>Add sequence</from>
+      <to>Table output - store</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database lookup - sales_channel_id</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>sales_channel</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>sales_channel</name>
-        <field>sales_channel</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>sales_channel_id</name>
-        <rename>sales_channel_id</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
-      <yloc>336</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Group by - sales channel</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <all_rows>N</all_rows>
-    <ignore_aggregate>N</ignore_aggregate>
-    <field_ignore/>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>grp</prefix>
-    <add_linenr>N</add_linenr>
-    <linenr_fieldname/>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>sales_channel</name>
-      </field>
-    </group>
-    <fields>
-      <field>
-        <aggregate>Count</aggregate>
-        <subject>sales_channel</subject>
-        <type>COUNT_ANY</type>
-        <valuefield/>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>336</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Ms Excel Input - sales channels</name>
+    <name>MS Excel Input - store</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -740,22 +534,15 @@ if the transformation is run again, the key already exists so just updates occur
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
-        <name>date</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>dd/MM/yyyy</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>customer</name>
+        <name>store_name</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -767,7 +554,7 @@ if the transformation is run again, the key already exists so just updates occur
         <group/>
       </field>
       <field>
-        <name>lens</name>
+        <name>store_city</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -779,32 +566,8 @@ if the transformation is run again, the key already exists so just updates occur
         <group/>
       </field>
       <field>
-        <name>sales_channel</name>
+        <name>store_country</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>city</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>amount</name>
-        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -817,7 +580,7 @@ if the transformation is run again, the key already exists so just updates occur
     </fields>
     <sheets>
       <sheet>
-        <name>transactions</name>
+        <name>stores</name>
         <startrow>0</startrow>
         <startcol>0</startcol>
       </sheet>
@@ -850,14 +613,14 @@ if the transformation is run again, the key already exists so just updates occur
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>208</yloc>
+      <xloc>160</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows - channel</name>
-    <type>SortRows</type>
+    <name>Add sequence</name>
+    <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -866,23 +629,16 @@ if the transformation is run again, the key already exists so just updates occur
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>Y</unique_rows>
-    <fields>
-      <field>
-        <name>sales_channel</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>2</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
+    <valuename>store_id</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name>store-id</counter_name>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -892,13 +648,13 @@ if the transformation is run again, the key already exists so just updates occur
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>208</yloc>
+      <xloc>304</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output - sales_channel</name>
+    <name>Table output - store</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -910,9 +666,9 @@ if the transformation is run again, the key already exists so just updates occur
     </partitioning>
     <connection>SLS_RAW</connection>
     <schema/>
-    <table>sales_channel</table>
+    <table>store_demo</table>
     <commit>1000</commit>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
@@ -927,12 +683,20 @@ if the transformation is run again, the key already exists so just updates occur
     <return_field/>
     <fields>
       <field>
-        <column_name>sales_channel</column_name>
-        <stream_name>sales_channel</stream_name>
+        <column_name>store_name</column_name>
+        <stream_name>store_name</stream_name>
       </field>
       <field>
-        <column_name>sales_channel_id</column_name>
-        <stream_name>sales_channel_id</stream_name>
+        <column_name>store_city</column_name>
+        <stream_name>store_city</stream_name>
+      </field>
+      <field>
+        <column_name>store_country</column_name>
+        <stream_name>store_country</stream_name>
+      </field>
+      <field>
+        <column_name>store_id</column_name>
+        <stream_name>store_id</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -944,126 +708,8 @@ if the transformation is run again, the key already exists so just updates occur
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>336</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Update</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>SLS_RAW</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>100</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>sales_channel</table>
-      <key>
-        <name>sales_channel_id</name>
-        <field>sales_channel_id</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>sales_channel</name>
-        <rename>sales_channel</rename>
-      </value>
-      <value>
-        <name>sales_channel_id</name>
-        <rename>sales_channel_id</rename>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>432</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Value mapper - store</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>sales_channel</field_to_use>
-    <target_field/>
-    <non_match_default/>
-    <fields>
-      <field>
-        <source_value>instore</source_value>
-        <target_value>store</target_value>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>256</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>sales channel exists?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Update</send_true_to>
-    <send_false_to>Table output - sales_channel</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>sales_channel_id</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>336</yloc>
+      <xloc>432</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1072,9 +718,5 @@ if the transformation is run again, the key already exists so just updates occur
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
-  <attributes>
-    <group>
-      <name>explorerState</name>
-    </group>
-  </attributes>
+  <attributes/>
 </transformation>

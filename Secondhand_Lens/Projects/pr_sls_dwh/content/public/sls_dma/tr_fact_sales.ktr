@@ -437,8 +437,8 @@
   <notepads>
     <notepad>
       <note>Populate SLS_DMA Tables in MySQL - Star Schema</note>
-      <xloc>160</xloc>
-      <yloc>96</yloc>
+      <xloc>32</xloc>
+      <yloc>32</yloc>
       <width>485</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -574,7 +574,7 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Lookup customer_tk  (SCD Type 2)</from>
+      <from>Lookup customer_tk</from>
       <to>Create date_tk</to>
       <enabled>Y</enabled>
     </hop>
@@ -630,7 +630,7 @@
     </hop>
     <hop>
       <from>Lookup lens_tk</from>
-      <to>Lookup customer_tk  (SCD Type 2)</to>
+      <to>Lookup customer_tk</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -638,7 +638,7 @@
     <name>Create date_tk</name>
     <type>Janino</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -662,8 +662,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>192</yloc>
+      <xloc>608</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -697,13 +697,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>288</yloc>
+      <xloc>368</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Lookup customer_tk  (SCD Type 2)</name>
+    <name>Lookup customer_tk</name>
     <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -754,8 +754,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>192</yloc>
+      <xloc>496</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -802,8 +802,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>288</yloc>
+      <xloc>496</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -859,8 +859,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>192</yloc>
+      <xloc>720</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -893,8 +893,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>288</yloc>
+      <xloc>272</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -927,8 +927,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>288</yloc>
+      <xloc>80</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -956,13 +956,8 @@
     <fifo_file_name>/tmp/fifo</fifo_file_name>
     <bulk_size>10000</bulk_size>
     <mapping>
-      <stream_name>sales_id</stream_name>
-      <field_name>sales_id</field_name>
-      <field_format_ok>OK</field_format_ok>
-    </mapping>
-    <mapping>
-      <stream_name>sale_date</stream_name>
-      <field_name>sale_date</field_name>
+      <stream_name>sales_date</stream_name>
+      <field_name>sales_date</field_name>
       <field_format_ok>OK</field_format_ok>
     </mapping>
     <mapping>
@@ -1004,8 +999,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>400</yloc>
+      <xloc>720</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1029,8 +1024,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>400</yloc>
+      <xloc>368</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1048,26 +1043,50 @@
     <fields>
       <field>
         <name>sales_date</name>
+        <rename/>
       </field>
       <field>
         <name>sales</name>
+        <rename/>
       </field>
       <field>
         <name>sales_channel</name>
+        <rename/>
       </field>
       <field>
         <name>lens_tk</name>
+        <rename/>
       </field>
       <field>
         <name>customer_tk</name>
+        <rename/>
       </field>
       <field>
         <name>date_tk</name>
+        <rename/>
       </field>
       <field>
         <name>store_tk</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>sales_date</name>
+        <rename>sales_date</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy/MM/dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1078,8 +1097,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>304</yloc>
+      <xloc>720</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1125,8 +1144,8 @@ sales_channel_id ASC
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
+      <xloc>80</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1165,8 +1184,8 @@ sales_channel_id ASC
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>400</yloc>
+      <xloc>80</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1237,8 +1256,8 @@ sales_channel_id ASC
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>304</yloc>
+      <xloc>832</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1256,27 +1275,35 @@ sales_channel_id ASC
     <fields>
       <field>
         <name>sales_id</name>
+        <rename/>
       </field>
       <field>
         <name>sales_date</name>
+        <rename/>
       </field>
       <field>
         <name>customer_id</name>
+        <rename/>
       </field>
       <field>
         <name>lens_id</name>
+        <rename/>
       </field>
       <field>
         <name>sales_channel_id</name>
+        <rename/>
       </field>
       <field>
         <name>store_id</name>
+        <rename/>
       </field>
       <field>
         <name>sales</name>
+        <rename/>
       </field>
       <field>
         <name>sales_channel</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1289,8 +1316,8 @@ sales_channel_id ASC
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>288</yloc>
+      <xloc>176</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

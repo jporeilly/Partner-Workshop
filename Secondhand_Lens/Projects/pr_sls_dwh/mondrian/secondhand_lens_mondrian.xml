@@ -44,7 +44,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Cube name="FY_2017_Sales" visible="true" cache="true" enabled="true">
+  <Cube name="FY_2019_Sales" visible="true" cache="true" enabled="true">
     <Table name="fact_sales">
     </Table>
     <Dimension type="StandardDimension" visible="true" foreignKey="customer_tk" highCardinality="false" name="CUSTOMER">

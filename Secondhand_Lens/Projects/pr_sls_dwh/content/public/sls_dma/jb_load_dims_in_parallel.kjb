@@ -426,8 +426,8 @@
       <parallel>Y</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>416</yloc>
+      <xloc>48</xloc>
+      <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -464,8 +464,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>368</yloc>
+      <xloc>272</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -502,8 +502,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>256</yloc>
+      <xloc>272</xloc>
+      <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -540,8 +540,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>672</xloc>
-      <yloc>624</yloc>
+      <xloc>384</xloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -562,8 +562,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>624</yloc>
+      <xloc>272</xloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -584,8 +584,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>768</yloc>
+      <xloc>272</xloc>
+      <yloc>464</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -622,8 +622,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>496</yloc>
+      <xloc>272</xloc>
+      <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -709,8 +709,8 @@ in parallel as well later on - often fact tables share dimensions.
     </notepad>
     <notepad>
       <note>Populate SLS_DMA Dimension Tables in MySQL - Star Schema</note>
-      <xloc>224</xloc>
-      <yloc>96</yloc>
+      <xloc>32</xloc>
+      <yloc>32</yloc>
       <width>592</width>
       <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
@@ -730,8 +730,8 @@ in parallel as well later on - often fact tables share dimensions.
     </notepad>
     <notepad>
       <note>Loads Dimension tables in parallel.</note>
-      <xloc>256</xloc>
-      <yloc>176</yloc>
+      <xloc>32</xloc>
+      <yloc>80</yloc>
       <width>283</width>
       <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
